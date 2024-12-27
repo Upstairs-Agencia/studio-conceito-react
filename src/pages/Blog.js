@@ -1,0 +1,1 @@
+export default function Blog() { return <h1 style={{ textAlign: 'center' }}>Blog</h1>; }

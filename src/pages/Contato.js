@@ -1,0 +1,1 @@
+export default function Contato() { return <h1 style={{ textAlign: 'center' }}>Contato</h1>; }

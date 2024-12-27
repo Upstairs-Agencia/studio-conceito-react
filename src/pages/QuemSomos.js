@@ -1,0 +1,1 @@
+export default function QuemSomos() { return <h1 style={{ textAlign: 'center' }}>Quem Somos</h1>; }
