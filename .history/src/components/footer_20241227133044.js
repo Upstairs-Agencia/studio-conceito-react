@@ -1,0 +1,1 @@
+export default function Cases() { return <h1 style={{ textAlign: 'center' }}>Footer</h1>; }

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";

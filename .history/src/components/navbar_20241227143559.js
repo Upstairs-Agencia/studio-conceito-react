@@ -22,11 +22,11 @@ const Navbar = () => {
       <MDBNavbar dark bgColor="white" className="py-4 px-5">
         <MDBContainer fluid className="d-flex justify-content-between align-items-center">
           {/* Logo */}
-          <MDBNavbarBrand href="#" className="ms-5">
+          <MDBNavbarBrand href="#" className="ms-3">
             <img
               src={Logo}
               alt="Logo"
-              style={{ maxHeight: "90px", marginLeft: "12vw"}}
+              style={{ maxHeight: "100px" }}
             />
           </MDBNavbarBrand>
 
@@ -35,13 +35,13 @@ const Navbar = () => {
             {/* Social Icons */}
             <div className="d-flex gap-3 me-3">
               <button className="btn btn-light rounded-circle p-2">
-                <FaLinkedin size={30} />
+                <FaLinkedin size={20} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaInstagram size={30} />
+                <FaInstagram size={20} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaPinterest size={30} />
+                <FaPinterest size={20} />
               </button>
             </div>
 

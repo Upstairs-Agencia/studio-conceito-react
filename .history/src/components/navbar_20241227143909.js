@@ -38,10 +38,10 @@ const Navbar = () => {
                 <FaLinkedin size={30} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaInstagram size={30} />
+                <FaInstagram size={20} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaPinterest size={30} />
+                <FaPinterest size={20} />
               </button>
             </div>
 

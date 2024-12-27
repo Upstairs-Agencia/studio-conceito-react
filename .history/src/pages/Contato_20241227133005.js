@@ -1,8 +1,9 @@
 import React from "react";
+import { FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import backgroundMap from "../images/ContactBg.png"; // Ajuste o caminho da imagem
+import backgroundMap from "./path/to/map-image"; // Ajuste o caminho da imagem
 import logoImage from "../images/logoBlack.png"; // Ajuste o caminho do logo
 
 const ContactPage = () => {
@@ -58,7 +59,35 @@ const ContactPage = () => {
                 </p>
               </MDBCol>
             </MDBRow>
-        
+            <div className="d-flex justify-content-center mt-4">
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white mx-3"
+                style={{ fontSize: "1.5rem" }}
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white mx-3"
+                style={{ fontSize: "1.5rem" }}
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.pinterest.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white mx-3"
+                style={{ fontSize: "1.5rem" }}
+              >
+                <FaPinterest />
+              </a>
+            </div>
           </MDBCol>
         </MDBRow>
       </MDBContainer>

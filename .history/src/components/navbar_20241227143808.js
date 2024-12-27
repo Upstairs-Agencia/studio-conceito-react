@@ -26,7 +26,7 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Logo"
-              style={{ maxHeight: "90px", marginLeft: "12vw"}}
+              style={{ maxHeight: "80px", marginLeft: "20vw"}}
             />
           </MDBNavbarBrand>
 
@@ -35,13 +35,13 @@ const Navbar = () => {
             {/* Social Icons */}
             <div className="d-flex gap-3 me-3">
               <button className="btn btn-light rounded-circle p-2">
-                <FaLinkedin size={30} />
+                <FaLinkedin size={20} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaInstagram size={30} />
+                <FaInstagram size={20} />
               </button>
               <button className="btn btn-light rounded-circle p-2">
-                <FaPinterest size={30} />
+                <FaPinterest size={20} />
               </button>
             </div>
 

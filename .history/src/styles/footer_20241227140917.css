@@ -1,0 +1,60 @@
+.footer-container {
+    background-color: white;
+    height: 30vh; /* Ocupa 30% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    height: 20%; /* Garante que o conteúdo ocupe toda a altura do footer */
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    max-width: 80%; /* Aumenta a imagem para 40% de seu tamanho */
+    margin-bottom: 10px;
+  }
+
+  
+  .footer-center {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .footer-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .footer-nav a {
+    margin: 1px 1rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: #ff6600;
+  }
+  
+  .footerHighlight {
+    color: #ff6600;
+  }
+  
+  .footer-right {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
