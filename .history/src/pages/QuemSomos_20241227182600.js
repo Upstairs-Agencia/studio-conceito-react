@@ -1,4 +1,4 @@
-
+export default function QuemSomos() { return <h1 style={{ textAlign: 'center' }}>Quem Somos</h1>; }
 import React from 'react';
 import Navbar from '../components/navbar'; // Importando o componente Navbar
 import {
@@ -8,7 +8,7 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 
-export default function QuemSomos(){
+function AboutUs() {
     return (
         <>
             {/* Navbar */}
