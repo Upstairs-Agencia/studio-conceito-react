@@ -96,7 +96,6 @@ const Navbar = () => {
                     className="text-decoration-none fs-6"
                     style={{
                       transition: "all 0.3s ease-in-out", // Transição suave
-                      color:"black"
                     }}
                     onMouseOver={(e) => {
                       e.currentTarget.style.color = "#FF7F30"; // Altera a cor

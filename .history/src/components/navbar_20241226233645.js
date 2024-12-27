@@ -74,10 +74,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          
-
-
-
           <div className="p-4 flex-grow-1">
             {/* Menu Items */}
             <ul className="list-unstyled">
@@ -93,18 +89,19 @@ const Navbar = () => {
                 <li key={index} className="py-2">
                   <Link
                     to={item.link}
-                    className="text-decoration-none fs-6"
+                    className="text-dark text-decoration-none fs-6"
                     style={{
+                      color: "black",
+                      fontWeight: "normal",
                       transition: "all 0.3s ease-in-out", // Transição suave
-                      color:"black"
                     }}
                     onMouseOver={(e) => {
-                      e.currentTarget.style.color = "#FF7F30"; // Altera a cor
-                      e.currentTarget.style.fontWeight = "bold"; // Negrito
+                      e.target.style.color = "#FF7F30"; // Cor laranja
+                      e.target.style.fontWeight = "bold"; // Negrito
                     }}
                     onMouseOut={(e) => {
-                      e.currentTarget.style.color = "black"; // Retorna à cor original
-                      e.currentTarget.style.fontWeight = "normal"; // Retira o negrito
+                      e.target.style.color = "black"; // Volta ao normal
+                      e.target.style.fontWeight = "normal"; // Remove o negrito
                     }}
                   >
                     {item.label}
@@ -113,7 +110,6 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-
 
 
           {/* Footer Section */}

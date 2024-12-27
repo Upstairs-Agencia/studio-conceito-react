@@ -74,46 +74,38 @@ const Navbar = () => {
             </button>
           </div>
 
-          
-
-
-
           <div className="p-4 flex-grow-1">
-            {/* Menu Items */}
-            <ul className="list-unstyled">
-              {[
-                { label: "Home", link: "/" },
-                { label: "Quem somos", link: "/quem-somos" },
-                { label: "Serviços", link: "/servicos" },
-                { label: "Cases", link: "/cases" },
-                { label: "Blog", link: "/blog" },
-                { label: "Clientes", link: "/clientes" },
-                { label: "Contato", link: "/contato" },
-              ].map((item, index) => (
-                <li key={index} className="py-2">
-                  <Link
-                    to={item.link}
-                    className="text-decoration-none fs-6"
-                    style={{
-                      transition: "all 0.3s ease-in-out", // Transição suave
-                      color:"black"
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.color = "#FF7F30"; // Altera a cor
-                      e.currentTarget.style.fontWeight = "bold"; // Negrito
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.color = "black"; // Retorna à cor original
-                      e.currentTarget.style.fontWeight = "normal"; // Retira o negrito
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+  {/* Menu Items */}
+  <ul className="list-unstyled">
+    {[
+      { label: "Home", link: "/" },
+      { label: "Quem somos", link: "/quem-somos" },
+      { label: "Serviços", link: "/servicos" },
+      { label: "Cases", link: "/cases" },
+      { label: "Blog", link: "/blog" },
+      { label: "Clientes", link: "/clientes" },
+      { label: "Contato", link: "/contato" },
+    ].map((item, index) => (
+      <li key={index} className="py-2">
+        <Link
+          to={item.link}
+          className="text-dark text-decoration-none fs-6"
+          style={{ color: "black", transition: "all 0.3s" }}
+          onMouseOver={(e) => {
+            e.target.style.color = "orange";
+            e.target.style.fontWeight = "bold";
+          }}
+          onMouseOut={(e) => {
+            e.target.style.color = "black";
+            e.target.style.fontWeight = "normal";
+          }}
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
 
           {/* Footer Section */}
