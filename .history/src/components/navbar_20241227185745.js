@@ -48,11 +48,6 @@ const Navbar = () => {
             {/* FaBars Icon for Sidebar */}
             <button
               className="btn rounded-circle p-2"
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
               onClick={() => setShowMenu(!showMenu)}
             >
               <FaBars size={20} color="black" />
