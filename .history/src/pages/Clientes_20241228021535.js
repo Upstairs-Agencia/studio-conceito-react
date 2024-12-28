@@ -68,7 +68,7 @@ const Clientes = () => {
                     width: '188px',
                     height: '126px',
                     backgroundColor: '#fff',
-                    border: 'none',
+                    border: '1px solid #ddd',
                     padding: '1rem'
                   }}
                 />

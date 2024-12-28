@@ -3,9 +3,11 @@ import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+const placeholderImage = 'https://placehold.co/150x150'; // Placeholder das logos
+
 const Clientes = () => {
-  // Array de 30 imagens placeholders para as logos
-  const logos = Array.from({ length: 30 }, () => 'https://placehold.co/188x126');
+  // Array de 30 imagens placeholders
+  const logos = Array.from({ length: 30 }, () => placeholderImage);
 
   return (
     <div>
@@ -40,7 +42,7 @@ const Clientes = () => {
             </MDBCol>
             <MDBCol md="4">
               <img
-                src="https://placehold.co/1920x256"
+                src="https://placehold.co/300x200"
                 alt="Clientes em destaque"
                 style={{ maxWidth: '100%' }}
               />
@@ -50,27 +52,15 @@ const Clientes = () => {
       </section>
 
       {/* Grid de logos */}
-      <section className="py-5 bg-white">
+      <section className="py-5">
         <MDBContainer>
           <MDBRow>
             {logos.map((logo, index) => (
-              <MDBCol
-                key={index}
-                md="2" // 5 colunas no grid
-                sm="4"
-                xs="6"
-                className="mb-4 d-flex justify-content-center"
-              >
+              <MDBCol key={index} md="2" sm="4" xs="6" className="mb-4 d-flex justify-content-center">
                 <img
                   src={logo}
                   alt={`Logo ${index + 1}`}
-                  style={{
-                    width: '188px',
-                    height: '126px',
-                    backgroundColor: '#fff',
-                    border: 'none',
-                    padding: '1rem'
-                  }}
+                  style={{ maxWidth: '100px', maxHeight: '100px' }}
                 />
               </MDBCol>
             ))}

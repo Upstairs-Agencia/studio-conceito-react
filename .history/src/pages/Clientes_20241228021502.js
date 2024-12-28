@@ -68,8 +68,8 @@ const Clientes = () => {
                     width: '188px',
                     height: '126px',
                     backgroundColor: '#fff',
-                    border: 'none',
-                    padding: '1rem'
+                    border: '1px solid #ddd',
+                    margin: '1rem' // Borda leve para destaque
                   }}
                 />
               </MDBCol>
