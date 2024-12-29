@@ -32,7 +32,7 @@
   justify-content: space-between;
   padding: 10px 15px;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 3s ease-in-out;
 }
 
 .case-card:hover .case-overlay {

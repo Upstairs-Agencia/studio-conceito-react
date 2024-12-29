@@ -22,7 +22,7 @@ const Home = () => {
         src="https://www.youtube.com/embed/nuiSe-N_DjA?si=-yfuEH7sa5y8dPHv" 
         title="Background video" 
         frameborder="0" 
-        allow="autoplay" 
+        allow="autoplay;" 
         referrerpolicy="strict-origin-when-cross-origin" 
         >
 

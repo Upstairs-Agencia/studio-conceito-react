@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/navbar'; // Importando o componente Navbar
-import Footer from '../components/footer';
 import {
   MDBContainer,
   MDBRow,
@@ -22,9 +21,9 @@ const Home = () => {
         src="https://www.youtube.com/embed/nuiSe-N_DjA?si=-yfuEH7sa5y8dPHv" 
         title="Background video" 
         frameborder="0" 
-        allow="autoplay" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" 
-        >
+        allowfullscreen>
 
       </iframe>
 
@@ -36,8 +35,6 @@ const Home = () => {
           </MDBContainer>
         </div>
       </div>
-
-      <Footer/>
 
     </>
   );
