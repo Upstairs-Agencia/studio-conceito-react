@@ -3,11 +3,16 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCa
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+import Blog1 from '../images/blogImg/blog1.png';
+import Blog2 from '../images/blogImg/blog2.png';
+import Blog3 from '../images/blogImg/blog3.png';
+
+
 const Blog = () => {
   const posts = [
-    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/blogImg/blog1.png' },
-    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: 'images/blogImg/blog2.png'},
-    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: 'images/blogImg/blog3.png' },
+    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: {Blog1} },
+    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: {Blog2}},
+    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: {Blog3} },
   ];
 
   return (

@@ -46,7 +46,7 @@ const Home = () => {
         <MDBContainer>
           <MDBRow className="align-items-center">
             {/* Texto à esquerda */}
-            <MDBCol md="4" className="position-relative">
+            <MDBCol md="5" className="position-relative">
               <div style={{
                 borderLeft: "2px solid #fff",
                 paddingLeft: "1rem"

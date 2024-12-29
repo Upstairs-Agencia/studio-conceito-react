@@ -3,11 +3,14 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCa
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+// Imagens dos posts
+const placeholderImage = 'https://placehold.co/600x400';
+
 const Blog = () => {
   const posts = [
-    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/blogImg/blog1.png' },
-    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: 'images/blogImg/blog2.png'},
-    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: 'images/blogImg/blog3.png' },
+    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: placeholderImage },
+    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: placeholderImage },
+    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: placeholderImage },
   ];
 
   return (

@@ -3,6 +3,9 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCa
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+
+
+
 const Blog = () => {
   const posts = [
     { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/blogImg/blog1.png' },
