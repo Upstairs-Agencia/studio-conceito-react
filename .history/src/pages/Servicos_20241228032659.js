@@ -47,7 +47,7 @@ const Servicos = () => {
               <img 
                 src={placeholderImage1} 
                 alt="Projetar e Construir" 
-                style={{ width: '100%', height: 'auto' }} 
+                style={{ width: '100%', height: 'auto', marginBottom: '2rem' }} 
               />
             </MDBCol>
           </MDBRow>
@@ -70,21 +70,20 @@ const Servicos = () => {
               backgroundColor: "black",
               color: "white",
               padding: "2rem",
-              width: "40%",
-              position: 'absolute',
-              bottom: "-80rem", // Faz o retângulo subir sobre a imagem de fundo
+              width: "30%",
+              bottom: "4rem", // Faz o retângulo subir sobre a imagem de fundo
               left: "2rem", // Margem à esquerda
               height: "auto", // Aumenta a altura com base no conteúdo
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)", // Para criar um efeito de profundidade
             }}
           >
-            <h1 className="fw-bold">Projetos</h1>
-            <h3>
+            <h2 className="fw-bold">Projetos</h2>
+            <p>
               Nosso grande desafio é traduzir a imagem corporativa para a arquitetura, compreendendo o universo e a história de cada cliente. Priorizamos os colaboradores com o objetivo de aumentar a satisfação, bem estar e consequente elevação da produtividade.
-            </h3>
-            <h3>
+            </p>
+            <p>
               Encaramos o momento atual como um desafio e uma excelente oportunidade de revermos os conceitos de ocupação, valorizando espaços colaborativos, de convivência e interação.
-            </h3>
+            </p>
           </div>
         </MDBContainer>
       </section>

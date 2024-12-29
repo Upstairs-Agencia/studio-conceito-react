@@ -72,7 +72,7 @@ const Servicos = () => {
               padding: "2rem",
               width: "40%",
               position: 'absolute',
-              bottom: "-80rem", // Faz o retângulo subir sobre a imagem de fundo
+              bottom: "2rem", // Faz o retângulo subir sobre a imagem de fundo
               left: "2rem", // Margem à esquerda
               height: "auto", // Aumenta a altura com base no conteúdo
               boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)", // Para criar um efeito de profundidade

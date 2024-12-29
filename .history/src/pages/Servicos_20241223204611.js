@@ -1,0 +1,1 @@
+export default function Servicos() { return <h1 style={{ textAlign: 'center' }}>Serviços</h1>; }
