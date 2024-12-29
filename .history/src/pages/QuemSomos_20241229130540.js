@@ -58,13 +58,12 @@ export default function QuemSomos() {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-          
-        </section>
-        <img
+          <img
             src="https://via.placeholder.com/1920x200"
             alt="Studio Conceito"
             className="imagemfundo"
-        />
+          />
+        </section>
 
         {/* Sócios Section */}
         <section className="py-5 socios text-white">

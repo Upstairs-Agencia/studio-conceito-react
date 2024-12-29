@@ -97,15 +97,15 @@ const Servicos = () => {
             <MDBCol md="7">
               <ul className="list-unstyled">
                 {[
-                  "estudo de viabilidade",
-                  "estudo preliminar",
-                  "anteprojeto",
-                  "projeto executivo",
-                  "as built",
-                  "Ilustrações arquitetônicas | imagens 3D",
-                  "projetos técnicos complementares",
-                  "compatibilização",
-                  "levantamento físico do imóvel"
+                  "planejamento",
+                  "cronograma e prazos",
+                  "suprimentos",
+                  "coordenação",
+                  "logística de fornecedores",
+                  "fiscalização",
+                  "controle de qualidade",
+                  "relatório técnico",
+                  "relatórios administrativos e financeiros"
                 ].map((item, index) => (
                   <li key={index} className="d-flex align-items-center mb-3">
                     <img 

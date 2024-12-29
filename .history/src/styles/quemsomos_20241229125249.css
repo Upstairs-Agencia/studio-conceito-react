@@ -1,7 +1,3 @@
-.all{
-    background-color: #fff;
-}
-
 .socios{
     background-color: #000;
 }
@@ -54,10 +50,6 @@
     height: 2px;
     background-color: #000;
     margin: 10px auto;
-  }
-
-  .mvvsection{
-    margin-bottom: 4rem;
   }
 
   /* Equipe Section */
@@ -131,7 +123,6 @@
   .grafico-label {
     margin-top: 10px;
     font-size: 1rem;
-    font-weight: bold;
   }
   
   

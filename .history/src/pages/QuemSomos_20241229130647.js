@@ -64,7 +64,7 @@ export default function QuemSomos() {
             src="https://via.placeholder.com/1920x200"
             alt="Studio Conceito"
             className="imagemfundo"
-        />
+          />
 
         {/* Sócios Section */}
         <section className="py-5 socios text-white">

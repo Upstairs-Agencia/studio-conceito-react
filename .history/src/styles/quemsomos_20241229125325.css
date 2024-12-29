@@ -1,7 +1,3 @@
-.all{
-    background-color: #fff;
-}
-
 .socios{
     background-color: #000;
 }
@@ -54,10 +50,6 @@
     height: 2px;
     background-color: #000;
     margin: 10px auto;
-  }
-
-  .mvvsection{
-    margin-bottom: 4rem;
   }
 
   /* Equipe Section */
@@ -114,7 +106,7 @@
     border-radius: 50%;
     border: 30px solid #eaeaea;
     border-top: 30px solid #3d7cc9;
-    transform: rotate(-90deg);
+    transform: rotate(-20deg);
     margin: 0 auto;
   }
   
