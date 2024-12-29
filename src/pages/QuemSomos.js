@@ -116,43 +116,23 @@ export default function QuemSomos(){
 
                     </MDBContainer>
             </section>
+             
+
             <section className='py-5'>
                 <MDBContainer>
-                    <h2 className='text-center fw-bold mb-5'>Equipe</h2>
                     <MDBRow>
                         <MDBCol md='6'>
                             <p>
-                            Nossos departamentos de Arquitetura e Engenharia são muito experientes na área corporativa.Eles possuem uma interação constante, o que torna o conhecimento de nossos colaboradores mais abrangente e os serviços oferecidos, tanto de obra quanto projeto, mais ricos e completos.
+                            A Studio Conceito tem seu quadro societário, e sua equipe de colaboradores, constituído por uma maioria de pessoas do gênero feminino.
                             </p>
-                            
-                        </MDBCol>
-                        <MDBCol md='6'>
-                            <MDBRow className='text-center'>
-                                <MDBCol md='4'>
-                                    <div className='icon mb-3'>
-                                        <i className='fas fa-bullseye fa-2x'></i>
-                                    </div>
-                                    <h5>Missão</h5>
-                                    <p>Apresentar as melhores soluções para as demandas dos nossos clientes, tanto na área de projeto como de obra.</p>
-                                </MDBCol>
-                                <MDBCol md='4'>
-                                    <div className='icon mb-3'>
-                                        <i className='fas fa-eye fa-2x'></i>
-                                    </div>
-                                    <h5>Visão</h5>
-                                    <p>Queremos ser reconhecidos como a empresa que mais cuida de seus clientes e colaboradores, próximos e atentos a todos os detalhes.</p>
-                                    </MDBCol>
-                                    <MDBCol md='4'>
-                                    <div className='icon mb-3'>
-                                        <i className='fas fa-eye fa-2x'></i>
-                                    </div>
-                                    <h5>Valores</h5>
-                                    <p>Ética, Transparência, Respeito à Vida, Inovação, Paixão, Excelência, Flexibilidade, Sustentabilidade, Equilíbrio e Fidelização.</p>
-                                </MDBCol>
-                                </MDBRow>
-                                </MDBCol>
+                        
 
-                        </MDBRow>
+                        </MDBCol>
+                    
+
+                    </MDBRow>
+
+                    
 
                     </MDBContainer>
             </section>
