@@ -1,0 +1,48 @@
+.case-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .case-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .case-card:hover .case-image {
+    transform: scale(1.05);
+  }
+  
+  .case-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .case-card:hover .case-overlay {
+    opacity: 1;
+  }
+  
+  .case-title {
+    font-size: 16px;
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .case-description {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  

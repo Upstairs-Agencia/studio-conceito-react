@@ -55,14 +55,14 @@ export default function QuemSomos() {
                 consequente fidelização de nossos clientes.
               </p>
             </MDBCol>
+
+            <img
+                src="https://via.placeholder.com/1920x200"
+                alt="Studio Conceito"
+                className="img-fluid"
+            />
           </MDBRow>
-          
         </MDBContainer>
-        <img
-            src="https://via.placeholder.com/1920x200"
-            alt="Studio Conceito"
-            className="img-fluid"
-          />
       </section>
 
       {/* Sócios Section */}

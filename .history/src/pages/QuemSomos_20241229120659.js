@@ -56,13 +56,12 @@ export default function QuemSomos() {
               </p>
             </MDBCol>
           </MDBRow>
-          
-        </MDBContainer>
-        <img
+          <img
             src="https://via.placeholder.com/1920x200"
             alt="Studio Conceito"
             className="img-fluid"
           />
+        </MDBContainer>
       </section>
 
       {/* Sócios Section */}

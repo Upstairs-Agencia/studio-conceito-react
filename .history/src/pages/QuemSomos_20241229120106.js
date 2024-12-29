@@ -3,7 +3,7 @@ import Navbar from "../components/navbar"; // Importando o componente Navbar
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { FaBullseye, FaEye, FaHeart } from "react-icons/fa";
 
-import Footer from "../components/footer";
+import Footer from '../components/footer';
 import "../styles/quemsomos.css";
 
 export default function QuemSomos() {
@@ -11,24 +11,6 @@ export default function QuemSomos() {
     <>
       {/* Navbar */}
       <Navbar />
-
-      {/* Seção de cabeçalho do quem somos */}
-      <section className="bg-black text-white py-5">
-        <MDBContainer>
-          <MDBRow className="align-items-center">
-            <MDBCol md="6">
-              <h1 className="fw-bold">Quem somos</h1>
-            </MDBCol>
-            <MDBCol md="6" className="text-end">
-              <img
-                src="https://placehold.co/200x150" // Imagem maior para seguir o padrão original
-                alt="Padrão gráfico"
-                style={{ maxWidth: "200px", marginRight: "4rem" }}
-              />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
 
       {/* Quem Somos Section */}
       <section className="py-5">
@@ -56,13 +38,7 @@ export default function QuemSomos() {
               </p>
             </MDBCol>
           </MDBRow>
-          
         </MDBContainer>
-        <img
-            src="https://via.placeholder.com/1920x200"
-            alt="Studio Conceito"
-            className="img-fluid"
-          />
       </section>
 
       {/* Sócios Section */}
@@ -91,33 +67,6 @@ export default function QuemSomos() {
                 <h4 className="fw-bold">Arq. Gabriel Castilho</h4>
                 <p>COO | Sócio fundador</p>
               </div>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
-
-      {/* Atendemos em todo Brasil Section */}
-      <section className="py-5 bg-light">
-        <MDBContainer>
-          <MDBRow className="align-items-center">
-            <MDBCol md="6" className="title-container">
-              <h1 className="atendemos-title">Atendemos</h1>
-              <h1 className="brasil-title">em todo Brasil</h1>
-            </MDBCol>
-            <MDBCol md="6">
-              <p className="text-large">
-                Com uma equipe multidisciplinar e altamente capacitada, composta
-                por arquitetos, engenheiros e designers, apresentamos as
-                melhores soluções para as demandas de nossos clientes, tanto na
-                área de <span className="fw-bold">projeto</span> como de{" "}
-                <span className="fw-bold">obra</span>.
-              </p>
-              <p className="text-large">
-                Adequamos nossos times às necessidades de cada solicitação,
-                sejam elas projetos, gerenciamento e execução de obra. Do início
-                ao fim, ficamos ao lado do cliente{" "}
-                <span className="fw-bold">cuidando de todos os detalhes!</span>
-              </p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

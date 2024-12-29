@@ -6,7 +6,7 @@ import {
 } from "mdb-react-ui-kit";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "../styles/cases.css";
+import "../Styles/cases.css";
 
 const caseStudies = [
   {
@@ -67,13 +67,16 @@ function Cases() {
                 />
                 <div className="case-overlay">
                   <div className="case-info">
-                    <span className="case-title">Case</span> <br></br>
+                    <span className="case-title">Case</span>
                     <span className="case-description">
                       {caseItem.title}
                     </span>
                   </div>
                 </div>
-          
+                <div className="case-text">
+                  <span className="case-title-text">{caseItem.title}</span>
+                  <span className="case-desc-text">{caseItem.description}</span>
+                </div>
               </div>
             </MDBCol>
           ))}

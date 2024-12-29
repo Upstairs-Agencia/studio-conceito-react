@@ -12,24 +12,6 @@ export default function QuemSomos() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Seção de cabeçalho do quem somos */}
-      <section className="bg-black text-white py-5">
-        <MDBContainer>
-          <MDBRow className="align-items-center">
-            <MDBCol md="6">
-              <h1 className="fw-bold">Quem somos</h1>
-            </MDBCol>
-            <MDBCol md="6" className="text-end">
-              <img
-                src="https://placehold.co/200x150" // Imagem maior para seguir o padrão original
-                alt="Padrão gráfico"
-                style={{ maxWidth: "200px", marginRight: "4rem" }}
-              />
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
-
       {/* Quem Somos Section */}
       <section className="py-5">
         <MDBContainer>
@@ -56,13 +38,7 @@ export default function QuemSomos() {
               </p>
             </MDBCol>
           </MDBRow>
-          
         </MDBContainer>
-        <img
-            src="https://via.placeholder.com/1920x200"
-            alt="Studio Conceito"
-            className="img-fluid"
-          />
       </section>
 
       {/* Sócios Section */}

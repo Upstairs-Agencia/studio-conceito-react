@@ -17,7 +17,7 @@ export default function QuemSomos() {
         <MDBContainer>
           <MDBRow className="align-items-center">
             <MDBCol md="6">
-              <h1 className="fw-bold">Quem somos</h1>
+              <h1 className="fw-bold">Quem Somos</h1>
             </MDBCol>
             <MDBCol md="6" className="text-end">
               <img
@@ -56,13 +56,7 @@ export default function QuemSomos() {
               </p>
             </MDBCol>
           </MDBRow>
-          
         </MDBContainer>
-        <img
-            src="https://via.placeholder.com/1920x200"
-            alt="Studio Conceito"
-            className="img-fluid"
-          />
       </section>
 
       {/* Sócios Section */}

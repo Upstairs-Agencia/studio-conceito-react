@@ -1,0 +1,62 @@
+/* Título: Atendemos em todo Brasil */
+.title-container {
+    text-align: left;
+  }
+  
+  .atendemos-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #000;
+  }
+  
+  .brasil-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: -10px; /* Para aproximar os textos */
+  }
+  
+  /* Texto em letras maiores */
+  .text-large {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: left;
+  }
+  
+  /* Missão, Visão e Valores */
+  .mission-row {
+    justify-content: space-between;
+  }
+  
+  .mission-col {
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .icon-container {
+    margin-bottom: 10px;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 10px auto;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .atendemos-title,
+    .brasil-title {
+      font-size: 2rem;
+    }
+  
+    .text-large {
+      font-size: 1rem;
+    }
+  
+    .mission-col {
+      max-width: 100%;
+    }
+  }
+  

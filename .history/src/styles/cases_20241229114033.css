@@ -1,0 +1,87 @@
+/* Estilo geral do card */
+.case-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Espaçamento vertical entre os cards */
+}
+
+/* Estilo da imagem */
+.case-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito no hover */
+.case-card:hover .case-image {
+  transform: scale(1.05);
+}
+
+/* Estilo do overlay (hover) */
+.case-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.case-card:hover .case-overlay {
+  opacity: 1;
+}
+
+/* Texto no hover */
+.case-title {
+  font-size: 16px;
+  color: orange;
+  font-weight: bold;
+}
+
+.case-description {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Texto fixo embaixo */
+.case-text {
+  margin-top: 10px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.case-title-text {
+  color: orange;
+  font-size: 14px;
+  font-weight: normal; /* Fonte normal */
+  display: block;
+}
+
+.case-desc-text {
+  color: white;
+  font-size: 14px;
+  font-weight: bold; /* Apenas a descrição é bold */
+  display: block;
+}
+
+/* Responsividade e espaçamento entre cards */
+.g-4 {
+  row-gap: 20px; /* Espaçamento uniforme na vertical */
+}
+
+/* Adaptação para diferentes tamanhos */
+@media (max-width: 768px) {
+  .case-card {
+    margin-bottom: 15px;
+  }
+}

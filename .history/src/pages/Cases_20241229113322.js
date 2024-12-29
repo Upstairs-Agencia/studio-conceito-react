@@ -67,7 +67,7 @@ function Cases() {
                 />
                 <div className="case-overlay">
                   <div className="case-info">
-                    <span className="case-title">Case</span> <br></br>
+                    <span className="case-title">Case</span>
                     <span className="case-description">
                       {caseItem.title}
                     </span>
