@@ -66,15 +66,16 @@ const Servicos = () => {
         }}
       >
         <MDBContainer>
+          {/* Retângulo com texto */}
           <div
             style={{
               backgroundColor: "black",
               color: "white",
               padding: "2rem",
               width: "40%",
-              left: "2rem",
-              height: "auto",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
+              left: "2rem", // Margem à esquerda
+              height: "auto", // Aumenta a altura com base no conteúdo
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)", // Para criar um efeito de profundidade
             }}
           >
             <h1 className="fw-bold">Projetos</h1>
@@ -88,56 +89,22 @@ const Servicos = () => {
         </MDBContainer>
       </section>
 
-      {/* Sessão Obras */}
-      <section 
-        style={{
-          backgroundImage: `url(${placeholderImage2})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '5rem 0',
-        }}
-      >
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md="6">
-              <img 
-                src={placeholderImage1} 
-                alt="Obras" 
-                style={{ width: '100%', height: 'auto' }} 
-              />
-            </MDBCol>
-            <MDBCol md="6" className="text-white">
-              <h1 className="fw-bold">Obras</h1>
-              <h3>
-                Nosso Departamento de Obras conta com grupos de engenheiros e arquitetos que executam e gerenciam nossos projetos e de terceiros.
-              </h3>
-              <h3>
-                Nosso cuidado com o cronograma, com as normas, com o orçamento, com a qualidade dos serviços e o pós-obra é nosso compromisso real com os nossos clientes.
-              </h3>
-              <h3>
-                Nosso comprometimento nos permite criar parcerias duradoras, Studio Conceito + Cliente, que nos possibilitam atender qualquer que seja sua demanda, desde pequenas intervenções à uma reestruturação completa.
-              </h3>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </section>
-
-      {/* Sessão Planejamento e Coordenação */}
+      {/* Sessão de tópicos com fundo preto */}
       <section className="bg-black text-white py-5">
         <MDBContainer>
           <MDBRow>
             <MDBCol md="7">
               <ul className="list-unstyled">
                 {[
-                  "planejamento",
-                  "cronograma e prazos",
-                  "suprimentos",
-                  "coordenação",
-                  "logística de fornecedores",
-                  "fiscalização",
-                  "controle de qualidade",
-                  "relatório técnico",
-                  "relatórios administrativos e financeiros"
+                  "estudo de viabilidade",
+                  "estudo preliminar",
+                  "anteprojeto",
+                  "projeto executivo",
+                  "as built",
+                  "Ilustrações arquitetônicas | imagens 3D",
+                  "projetos técnicos complementares",
+                  "compatibilização",
+                  "levantamento físico do imóvel"
                 ].map((item, index) => (
                   <li key={index} className="d-flex align-items-center mb-3">
                     <img 

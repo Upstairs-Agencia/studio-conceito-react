@@ -22,7 +22,7 @@ const ContactPage = () => {
             <div className="text-center mb-4">
               <img src={logoImage} alt="Studio Conceito Logo" style={{ width: "150px" }} />
             </div>
-            <h1><strong className="text-white mb-3" style={{textAlign: "left"}}>Contato</strong></h1>
+            <h1><strong className="text-white mb-3" style={{textAlign: "left", marginTop: "-14rem"}}>Contato</strong></h1>
             <MDBRow>
               <MDBCol md="6" className="text-white">
                 <p>

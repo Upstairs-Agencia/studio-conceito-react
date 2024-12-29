@@ -1,6 +1,10 @@
 import React from 'react';
 import Navbar from '../components/navbar'; // Importando o componente Navbar
-import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol
+} from 'mdb-react-ui-kit';
 import { FaBullseye, FaEye, FaHeart } from 'react-icons/fa';
 
 export default function QuemSomos() {
@@ -67,50 +71,48 @@ export default function QuemSomos() {
       {/* Missão, Visão e Valores Section */}
       <section className='py-5 bg-white'>
         <MDBContainer>
+          <h2 className='text-center fw-bold mb-5'>Atendemos em todo Brasil</h2>
           <MDBRow>
-            {/* Título e Subtítulo */}
             <MDBCol md='6'>
-              <h2 className='fw-bold mb-3'>Atendemos em todo Brasil</h2>
-              <p className='mb-2'>
-                <strong>
-                  Com uma equipe multidisciplinar e altamente capacitada, composta por arquitetos, engenheiros e designers, apresentamos as melhores soluções para as demandas de nossos clientes, tanto na área de <span className='fw-bold'>projeto</span> como de <span className='fw-bold'>obra</span>.
-                </strong>
+              <p>
+                Com uma equipe multidisciplinar e altamente capacitada, composta por arquitetos, engenheiros e designers, apresentamos as melhores soluções para as demandas de nossos clientes, tanto na área de <strong>projeto</strong> como de <strong>obra</strong>.
               </p>
               <p>
-                Adequamos nossos times às necessidades de cada solicitação, sejam elas projetos, gerenciamento e execução de obra. Do início ao fim, ficamos ao lado do cliente <span className='fw-bold'>cuidando de todos os detalhes!</span>
+                Adequamos nossos times às necessidades de cada solicitação, sejam elas projetos, gerenciamento e execução de obra.
+              </p>
+              <p>
+                Do início ao fim, ficamos ao lado do cliente <strong>cuidando de todos os detalhes!</strong>
               </p>
             </MDBCol>
-
-            {/* Ícones e Descrições */}
             <MDBCol md='6'>
               <MDBRow className='text-center'>
-                {/* Missão */}
                 <MDBCol md='4'>
-                  <div className='mb-3'>
-                    <FaBullseye size={40} color="#3d7cc9" />
+                  <div className='icon mb-3'>
+                    <FaBullseye size={32} />
                   </div>
                   <h5 className='fw-bold'>Missão</h5>
-                  <p>
+                  <hr className='my-2' />
+                  <p className='text-start'>
                     Apresentar as melhores soluções para as demandas dos nossos clientes, tanto na área de projeto como de obra.
                   </p>
                 </MDBCol>
-                {/* Visão */}
                 <MDBCol md='4'>
-                  <div className='mb-3'>
-                    <FaEye size={40} color="#3d7cc9" />
+                  <div className='icon mb-3'>
+                    <FaEye size={32} />
                   </div>
                   <h5 className='fw-bold'>Visão</h5>
-                  <p>
+                  <hr className='my-2' />
+                  <p className='text-start'>
                     Queremos ser reconhecidos como a empresa que mais cuida de seus clientes e colaboradores, próximos e atentos a todos os detalhes.
                   </p>
                 </MDBCol>
-                {/* Valores */}
                 <MDBCol md='4'>
-                  <div className='mb-3'>
-                    <FaHeart size={40} color="#3d7cc9" />
+                  <div className='icon mb-3'>
+                    <FaHeart size={32} />
                   </div>
                   <h5 className='fw-bold'>Valores</h5>
-                  <p>
+                  <hr className='my-2' />
+                  <p className='text-start'>
                     Ética, Transparência, Respeito à Vida, Inovação, Paixão, Excelência, Flexibilidade, Sustentabilidade, Equilíbrio e Fidelização.
                   </p>
                 </MDBCol>
