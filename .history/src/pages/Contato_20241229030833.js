@@ -22,23 +22,23 @@ const ContactPage = () => {
             <div className="text-center mb-4">
               <img src={logoImage} alt="Studio Conceito Logo" style={{ width: "150px" }} />
             </div>
-            <h1><strong className="text-white mb-3" style={{textAlign: "left"}}>Contato</strong></h1>
+            <h2 className="text-white text-center mb-3">Contato</h2>
             <MDBRow>
               <MDBCol md="6" className="text-white">
                 <p>
-                  <strong style={{color: `#ff6600`}}>TELEFONE</strong>
+                  <strong>TELEFONE</strong>
                   <br />
                   +55 11 9163-27532
                   <br />
                   +55 11 2364-7151
                 </p>
                 <p>
-                  <strong style={{color: `#ff6600`}}>EMAIL</strong>
+                  <strong>EMAIL</strong>
                   <br />
                   comercial@sconceito.com.br
                 </p>
                 <p>
-                  <strong style={{color: `#ff6600`}}>ENDEREÇO</strong>
+                  <strong>ENDEREÇO</strong>
                   <br />
                   Rua Arizona, 1349 – 13º andar
                   <br />
@@ -52,7 +52,7 @@ const ContactPage = () => {
                   sc@sconceito.com.br
                 </p>
                 <p>
-                  <strong style={{color: `#ff6600`}}>TRABALHE CONOSCO</strong>
+                  <strong>TRABALHE CONOSCO</strong>
                   <br />
                   Envie seu currículo
                 </p>
