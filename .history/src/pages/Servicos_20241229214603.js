@@ -151,7 +151,7 @@ const Servicos = () => {
             <MDBCol md="6" className="text-Black">
               <h1 className="fw-bold">Obras</h1>
               <h5 style={{marginBottom:"2rem", marginTop:"2rem"}}>
-                Nosso Departamento de Obras conta com grupos de <strong> engenheiros </strong> e <strong> arquitetos </strong>que executam e gerenciam nossos projetos e de terceiros.
+                Nosso Departamento de Obras conta com grupos de engenheiros e arquitetos que executam e gerenciam nossos projetos e de terceiros.
               </h5>
               <h5 style={{marginBottom:"2rem"}}>
                 Nosso cuidado com o cronograma, com as normas, com o orçamento, com a qualidade dos serviços e o pós-obra é nosso compromisso real com os nossos clientes.

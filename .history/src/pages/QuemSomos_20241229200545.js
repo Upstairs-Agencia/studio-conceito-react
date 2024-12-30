@@ -10,7 +10,6 @@ import Escritorio from '../images/quemsomosImg/escritorioImg.png';
 import Bgbottom from '../images/quemsomosImg/BackgroundEndsession.png';
 import socio1 from '../images/quemsomosImg/socioCristina.png';
 import socio2 from '../images/quemsomosImg/socioCastilho.png';
-import bgesquerda from '../images/quemsomosImg/Backgroundesqerda.png';
 
 export default function QuemSomos() {
   return (
@@ -179,7 +178,7 @@ export default function QuemSomos() {
             <MDBContainer fluid className="d-flex align-items-center">
               <MDBCol md="4" className="p-0">
                 <img
-                  src={bgesquerda}
+                  src="https://via.placeholder.com/600x400"
                   alt="Equipe"
                   className="img-fluid equipe-image"
                 />

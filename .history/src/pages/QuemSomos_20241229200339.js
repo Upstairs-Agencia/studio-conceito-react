@@ -8,9 +8,6 @@ import "../styles/quemsomos.css";
 
 import Escritorio from '../images/quemsomosImg/escritorioImg.png';
 import Bgbottom from '../images/quemsomosImg/BackgroundEndsession.png';
-import socio1 from '../images/quemsomosImg/socioCristina.png';
-import socio2 from '../images/quemsomosImg/socioCastilho.png';
-import bgesquerda from '../images/quemsomosImg/Backgroundesqerda.png';
 
 export default function QuemSomos() {
   return (
@@ -67,7 +64,7 @@ export default function QuemSomos() {
           
         </section>
         <img
-            src={Bgbottom}
+            src="https://via.placeholder.com/1920x200"
             alt="Studio Conceito"
             className="imagemfundo"
         />
@@ -80,7 +77,7 @@ export default function QuemSomos() {
               <MDBCol md="6" className="mb-4">
                 <div className="team-member">
                   <img
-                    src={socio1}
+                    src="https://via.placeholder.com/400x400"
                     alt="Arq. Cristina Castilho"
                     className="img-fluid mb-2"
                   />
@@ -91,7 +88,7 @@ export default function QuemSomos() {
               <MDBCol md="6" className="mb-4">
                 <div className="team-member">
                   <img
-                    src={socio2}
+                    src="https://via.placeholder.com/400x400"
                     alt="Arq. Gabriel Castilho"
                     className="img-fluid mb-2"
                   />
@@ -179,7 +176,7 @@ export default function QuemSomos() {
             <MDBContainer fluid className="d-flex align-items-center">
               <MDBCol md="4" className="p-0">
                 <img
-                  src={bgesquerda}
+                  src="https://via.placeholder.com/600x400"
                   alt="Equipe"
                   className="img-fluid equipe-image"
                 />

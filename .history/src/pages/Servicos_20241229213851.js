@@ -6,8 +6,8 @@ import Footer from '../components/footer';
 import icon from "../images/servicosImg/icontopico.png";
 import servicos from "../images/servicosImg/serviços.png";
 import escritorio from "../images/servicosImg/escritorioimg.png";
-import bgsession2 from "../images/servicosImg/bgsession2.png";
-
+import bgblack from "../images/servicosImg/Backgroundblack.png";
+import finalimg from "../images/servicosImg/finalimg.png";
 
 const Servicos = () => {
   return (
@@ -134,7 +134,7 @@ const Servicos = () => {
       {/* Sessão Obras */}
       <section 
         style={{
-          backgroundImage: `url(${bgsession2})`,
+          backgroundImage: `url(${escritorio})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: '5rem 0',
@@ -145,20 +145,21 @@ const Servicos = () => {
             <MDBCol md="6">
               <img 
                 src={escritorio} 
-                alt="Obras"  
+                alt="Obras" 
+                style={{ width: '100%', height: 'auto' }} 
               />
             </MDBCol>
-            <MDBCol md="6" className="text-Black">
+            <MDBCol md="6" className="text-white">
               <h1 className="fw-bold">Obras</h1>
-              <h5 style={{marginBottom:"2rem", marginTop:"2rem"}}>
-                Nosso Departamento de Obras conta com grupos de <strong> engenheiros </strong> e <strong> arquitetos </strong>que executam e gerenciam nossos projetos e de terceiros.
-              </h5>
-              <h5 style={{marginBottom:"2rem"}}>
+              <h3>
+                Nosso Departamento de Obras conta com grupos de engenheiros e arquitetos que executam e gerenciam nossos projetos e de terceiros.
+              </h3>
+              <h3>
                 Nosso cuidado com o cronograma, com as normas, com o orçamento, com a qualidade dos serviços e o pós-obra é nosso compromisso real com os nossos clientes.
-              </h5>
-              <h5 style={{marginBottom:"2rem"}}>
+              </h3>
+              <h3>
                 Nosso comprometimento nos permite criar parcerias duradoras, Studio Conceito + Cliente, que nos possibilitam atender qualquer que seja sua demanda, desde pequenas intervenções à uma reestruturação completa.
-              </h5>
+              </h3>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

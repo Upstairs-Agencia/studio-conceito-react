@@ -179,7 +179,7 @@ export default function QuemSomos() {
             <MDBContainer fluid className="d-flex align-items-center">
               <MDBCol md="4" className="p-0">
                 <img
-                  src={bgesquerda}
+                  src="https://via.placeholder.com/600x400"
                   alt="Equipe"
                   className="img-fluid equipe-image"
                 />
