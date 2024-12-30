@@ -12,99 +12,99 @@ import "../styles/cases.css";
 const caseStudies = [
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Studio Conceito",
-    src:"images/casesImg/studioconceito.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Ifood",
-    src:"images/casesImg/ifood2.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Aj1",
-    src:"images/casesImg/AJ1-1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Cemig",
-    src:"images/casesImg/cemig1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia5.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia2.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Bacardi",
-    src:"images/casesImg/bacardi1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "AstraZeneca - Centro Medico",
-    src:"images/casesImg/astrazeneca3.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Ifood - espaço dos entregadores",
-    src:"images/casesImg/ifood3.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Apsen",
-    src:"images/casesImg/apsen1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Astrazeneca - Restaurante",
-    src:"images/casesImg/astrazeneca2.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Apsen",
-    src:"images/casesImg/apsen.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Aj1",
-    src:"images/casesImg/AJ1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia4.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "AstraZeneca - Centro Medico",
-    src:"images/casesImg/astrazeneca-centromedico.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Ifood",
-    src:"images/casesImg/ifood.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Studio Conceito",
-    src:"images/casesImg/studioconceito1.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Bacardi",
-    src:"images/casesImg/bacardi.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia3.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Cemig",
-    src:"images/casesImg/cemig.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Ifood - Recife",
-    src:"images/casesImg/ifood4.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
   {
     title: "AstraZeneca - Restaurante",
-    src:"images/casesImg/astrazeneca.png",
+    src:"images/casesImg/[nomedocase sem espaco].png",
   },
 ];
 

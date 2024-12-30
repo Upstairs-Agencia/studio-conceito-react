@@ -16,7 +16,7 @@ const caseStudies = [
   },
   {
     title: "Studio Conceito",
-    src:"images/casesImg/studioconceito.png",
+    src:"images/casesImg/estudioconceito.png",
   },
   {
     title: "Ifood",

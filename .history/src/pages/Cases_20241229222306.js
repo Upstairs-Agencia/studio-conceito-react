@@ -16,7 +16,7 @@ const caseStudies = [
   },
   {
     title: "Studio Conceito",
-    src:"images/casesImg/studioconceito.png",
+    src:"images/casesImg/estudioconceito.png",
   },
   {
     title: "Ifood",
@@ -32,7 +32,7 @@ const caseStudies = [
   },
   {
     title: "Empresa de Tecnologia",
-    src:"images/casesImg/empresadetecnologia5.png",
+    src:"images/casesImg/empresadetecnogia5.png",
   },
   {
     title: "Empresa de Tecnologia",
