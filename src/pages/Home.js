@@ -2,17 +2,16 @@ import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle } from 'mdb-react-ui-kit';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import imgesquerda from '../images/homeImg/home.png';
 
 
-// Imagens dos posts
-const placeholderImage = 'https://placehold.co/600x400';
 
 const Home = () => {
 
   const posts = [
-    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: placeholderImage },
-    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: placeholderImage },
-    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: placeholderImage },
+    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/homeImg/home3.png'},
+    { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: 'images/homeImg/home4.png' },
+    { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: 'images/homeImg/home5.png' },
   ];
 
   return (
@@ -61,11 +60,12 @@ const Home = () => {
             <MDBCol md="4" className="p-0 justify-content-end" style={{marginLeft:"14vw"}}>
 
               <div style={{
-                backgroundImage: "url('https://via.placeholder.com/800x400')",
+                backgroundImage:`url(${imgesquerda})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100%",
-                minHeight: "250px"
+                minHeight: "250px",
+                width: "800px",
               }}></div>
             </MDBCol>
           </MDBRow>
