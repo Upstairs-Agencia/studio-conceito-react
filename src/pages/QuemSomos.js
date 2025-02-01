@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/navbar"; // Importando o componente Navbar
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
-import { FaBullseye, FaEye, FaHeart } from "react-icons/fa";
+import { FiEye, FiHeart } from "react-icons/fi";
+import { LiaBullseyeSolid } from "react-icons/lia";
 
 import Footer from "../components/footer";
 import "../styles/quemsomos.css";
@@ -10,14 +11,13 @@ import Escritorio from '../images/quemsomosImg/escritorioImg.png';
 import Bgbottom from '../images/quemsomosImg/BackgroundEndsession.png';
 import socio1 from '../images/quemsomosImg/socioCristina.png';
 import socio2 from '../images/quemsomosImg/socioCastilho.png';
-import bgesquerda from '../images/quemsomosImg/Backgroundesqerda.png';
+import graficoDiversidadeSocios from '../images/quemsomosImg/diversidade-socios-grafico.png';
+import graficoDiversidadeColaboradores from '../images/quemsomosImg/diversidade-colaboradores-grafico.png';
 
 export default function QuemSomos() {
   return (
     <>
       <div className="all">
-        {/* Navbar */}
-        <Navbar />
 
         {/* Seção de cabeçalho do quem somos */}
         <section className="bg-black text-white py-5">
@@ -64,12 +64,12 @@ export default function QuemSomos() {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-          
+
         </section>
         <img
-            src={Bgbottom}
-            alt="Studio Conceito"
-            className="imagemfundo"
+          src={Bgbottom}
+          alt="Studio Conceito"
+          className="imagemfundo"
         />
 
         {/* Sócios Section */}
@@ -106,15 +106,16 @@ export default function QuemSomos() {
         {/* Atendemos em todo Brasil Section */}
         <section className="py-5">
           <MDBContainer>
-            <MDBRow className="align-items-center">
+            <MDBRow className="align-items-start justify-content-center atendimento-row">
               <MDBCol md="6" className="title-container">
                 <h1 className="atendemos-title">Atendemos</h1>
                 <h1 className="brasil-title">em todo Brasil</h1>
+                <div className="divider d-inline-block" style={{width: '34%'}}></div>
               </MDBCol>
               <MDBCol md="6">
                 <p className="text-large">
                   Com uma equipe multidisciplinar e altamente capacitada,
-                  composta por arquitetos, engenheiros e designers, apresentamos
+                  composta por: arquitetos, engenheiros e designers, apresentamos
                   as melhores soluções para as demandas de nossos clientes,
                   tanto na área de <span className="fw-bold">projeto</span> como
                   de <span className="fw-bold">obra</span>.
@@ -133,27 +134,27 @@ export default function QuemSomos() {
         </section>
 
         {/* Missão, Visão e Valores Section */}
-        <section className="py-5">
+        <section className="pt-5">
           <MDBContainer className="mvvsection">
             <MDBRow className="text-center mission-row">
               <MDBCol md="4" className="mission-col">
                 <div className="icon-container">
-                  <FaBullseye size={40} color="#3d7cc9" />
+                  <LiaBullseyeSolid size={55} color="#3d7cc9" />
                 </div>
-                <h5 className="fw-bold">Missão</h5>
+                <h5 className="pilares-sconceito-title">Missão</h5>
                 <div className="divider"></div>
-                <p>
+                <p className="pilares-sconceito-text">
                   Apresentar as melhores soluções para as demandas dos nossos
                   clientes, tanto na área de projeto como de obra.
                 </p>
               </MDBCol>
               <MDBCol md="4" className="mission-col">
                 <div className="icon-container">
-                  <FaEye size={40} color="#3d7cc9" />
+                  <FiEye size={55} color="#3d7cc9" />
                 </div>
-                <h5 className="fw-bold">Visão</h5>
+                <h5 className="pilares-sconceito-title">Visão</h5>
                 <div className="divider"></div>
-                <p>
+                <p className="pilares-sconceito-text">
                   Queremos ser reconhecidos como a empresa que mais cuida de
                   seus clientes e colaboradores, próximos e atentos a todos os
                   detalhes.
@@ -161,11 +162,11 @@ export default function QuemSomos() {
               </MDBCol>
               <MDBCol md="4" className="mission-col">
                 <div className="icon-container">
-                  <FaHeart size={40} color="#3d7cc9" />
+                  <FiHeart size={55} color="#3d7cc9" />
                 </div>
-                <h5 className="fw-bold">Valores</h5>
+                <h5 className="pilares-sconceito-title">Valores</h5>
                 <div className="divider"></div>
-                <p>
+                <p className="pilares-sconceito-text">
                   Ética, Transparência, Respeito à Vida, Inovação, Paixão,
                   Excelência, Flexibilidade, Sustentabilidade, Equilíbrio e
                   Fidelização.
@@ -176,37 +177,36 @@ export default function QuemSomos() {
 
           {/* Equipe Section */}
           <section className="equipe-section">
-            <MDBContainer fluid className="d-flex align-items-center">
-              <MDBCol md="4" className="p-0">
-                <img
-                  src={bgesquerda}
-                  alt="Equipe"
-                  className="img-fluid equipe-image"
-                />
-              </MDBCol>
-              <MDBCol
-                md="8"
-                className="d-flex flex-column justify-content-center equipe-text"
-              >
-                <h2 className="fw-bold text-left mb-3">Equipe</h2>
-                <p className="text-left">
-                  Nossos departamentos de Arquitetura e Engenharia são{" "}
-                  <strong>muito experientes na área corporativa.</strong>
-                </p>
-                <p className="text-left">
-                  Eles possuem uma interação constante, o que torna o
-                  conhecimento de nossos colaboradores mais abrangente e os
-                  serviços oferecidos, tanto de obra quanto projeto, mais ricos
-                  e completos.
-                </p>
-              </MDBCol>
+            <MDBContainer fluid className="d-flex">
+              <MDBRow className=" align-items-between">
+                <MDBCol md="4" className="p-0 equipe-image-col">
+                  <span className="equipe-image"></span>
+                </MDBCol>
+                <MDBCol
+                  md="7"
+                  className="d-flex flex-column justify-content-center align-items-start equipe-text"
+                >
+                  <h2 className="fw-bold text-left mb-3">Equipe</h2>
+                  <p className="text-left">
+                    Nossos departamentos de Arquitetura e Engenharia são{" "}
+                    <span>muito experientes na área corporativa.</span>
+                  </p>
+                  <p className="text-left">
+                    Eles possuem uma interação constante, o que torna o
+                    conhecimento de nossos colaboradores mais abrangente e os
+                    serviços oferecidos, tanto de obra quanto projeto, mais ricos
+                    e completos.
+                  </p>
+                </MDBCol>
+              </MDBRow>
             </MDBContainer>
           </section>
 
           {/* Diversidade Section */}
           <section className="diversidade-section">
-            <MDBContainer className="d-flex align-items-center justify-content-between">
-              <MDBCol md="6" className="d-flex flex-column diversidade-text">
+            <MDBContainer>
+              <MDBRow className="align-items-center justify-content-between diversidade-row">            
+                <MDBCol md="5" className="d-flex flex-column diversidade-text m-0 p-0">
                 <p className="text-left">
                   A Studio Conceito tem seu quadro societário, e sua equipe de
                   colaboradores, constituído por uma{" "}
@@ -215,26 +215,16 @@ export default function QuemSomos() {
                   </span>
                 </p>
               </MDBCol>
-              <MDBCol md="6" className="d-flex justify-content-center gap-4">
-                {/* Gráfico Quadro Societário */}
-                <div className="grafico-container">
-                  <div className="grafico"></div>
-                  <span className="grafico-percentual">51%</span>
-                  <p className="grafico-label">Quadro Societário</p>
-                </div>
-
-                {/* Gráfico Colaboradoras */}
-                <div className="grafico-container">
-                  <div className="grafico"></div>
-                  <span className="grafico-percentual">70%</span>
-                  <p className="grafico-label">Colaboradoras</p>
-                </div>
-              </MDBCol>
+                <MDBCol md="7" className="d-flex justify-content-center">
+                  <div className="chart-container">
+                    <img src={graficoDiversidadeSocios} className="grafico-img-socios" alt="Gráfico de diversidade - Sócios" />
+                    <img src={graficoDiversidadeColaboradores} className="grafico-img-colaboradores" alt="Gráfico de diversidade - Colaboradores" />
+                  </div>
+                </MDBCol>
+              </MDBRow>
             </MDBContainer>
           </section>
         </section>
-
-        <Footer />
       </div>
     </>
   );

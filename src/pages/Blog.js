@@ -12,7 +12,6 @@ const Blog = () => {
 
   return (
     <div>
-      <Navbar />
       {/* Seção de cabeçalho do Blog */}
       <section className="bg-black text-white py-5">
         <MDBContainer>
@@ -58,7 +57,6 @@ const Blog = () => {
           </MDBRow>
         </MDBContainer>
       </section>
-      <Footer />
     </div>
   );
 };

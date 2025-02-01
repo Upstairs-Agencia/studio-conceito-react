@@ -1,99 +1,130 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle } from 'mdb-react-ui-kit';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import imgesquerda from '../images/homeImg/home.png';
-
+import imgesquerda from '../images/homeImg/Grupo-de-mascara-3-1.png';
+import CasesCarousel from '../components/casesCarousel';
+import { LuCircleArrowRight } from "react-icons/lu";
+import BrandsCarousel from '../components/BrandsCarousel';
 
 
 const Home = () => {
 
   const posts = [
-    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/homeImg/home3.png'},
+    { title: 'O futuro do escritório é híbrido!', date: 'abril 15, 2024', image: 'images/homeImg/home3.png' },
     { title: 'Tendências da arquitetura corporativa', date: 'abril 15, 2024', image: 'images/homeImg/home4.png' },
     { title: 'Turn Key ou chave na mão', date: 'abril 15, 2024', image: 'images/homeImg/home5.png' },
   ];
 
   return (
     <>
-      {/* Navbar */}
-      <Navbar />
 
-      {/* Hero Section com vídeo de fundo */}
-      <div className='hero-section position-relative'>
-        <iframe
-          width="100%"
-          height="725"
-          src="https://www.youtube.com/embed/nuiSe-N_DjA?autoplay=1&loop=1&controls=0&showinfo=0&modestbranding=1&si=-yfuEH7sa5y8dPHv"
-          title="Background video"
-          frameBorder="0"
-          allow="autoplay"
-          referrerPolicy="strict-origin-when-cross-origin"
-        ></iframe>
+      <div className="hero-section">
+        <div className="video-container">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/nuiSe-N_DjA?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playsinline=1&playlist=nuiSe-N_DjA&rel=0&fs=0&disablekb=1"
+            title="Background Video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
 
-        <div className='overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <MDBContainer className='text-center text-white'>
-            <h1 className='display-4 fw-bold' style={{ color: "#ff6600" }}> <strong>ARQUITETURA</strong> </h1>
-            <h4 className='fs-5'>DESDE 2009 </h4>
-            <h1 style={{ fontWeight: "lighter", fontSize: "6rem" }}>CORPORATIVA</h1>
+
+        </div>
+
+        <div className="overlay">
+          <MDBContainer className="text-white">
+            <h1 className="hero-title">ARQUITETURA</h1>
+            <div className='hero-subtitle-container'>
+              <h4 className="hero-subtitle">DESDE 2009</h4>
+              <h1 className="hero-main-text">CORPORATIVA</h1>
+            </div>
           </MDBContainer>
         </div>
+        <div className="fade-overlay"></div>
       </div>
 
+
       {/* Seção de Equipe */}
-      <div style={{ backgroundColor: "#000", color: "#fff" }} className="py-5">
-        <MDBContainer>
-          <MDBRow className="align-items-center">
+      <section className='bg-black' style={{ color: "#fff" }}>
+        <MDBContainer fluid>
+          <MDBRow className="align-items-center gap-0">
             {/* Texto à esquerda */}
-            <MDBCol md="4" className="position-relative">
-              <div style={{
-                borderLeft: "2px solid #fff",
-                paddingLeft: "1rem"
-              }}>
-                <p className="mb-0" style={{fontSize:"1.5rem"}}>
+            <MDBCol md="6" className="position-relative intro-home-col d-flex justify-content-center align-items-center">
+              <div className="intro-home-border">
+                <p className="mb-0 intro-home-text">
                   Nossa equipe multidisciplinar, composta por <strong>Arquitetos</strong>, <strong>Engenheiros</strong> e <strong>Designers</strong>, apresenta as melhores soluções para <strong>projetos</strong> e <strong>obras</strong> corporativas.
                 </p>
               </div>
             </MDBCol>
 
-            {/* Imagem à direita */}
-            <MDBCol md="4" className="p-0 justify-content-end" style={{marginLeft:"14vw"}}>
+            <MDBCol md="6" className="p-0 justify-content-end">
 
-              <div style={{
-                backgroundImage:`url(${imgesquerda})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-                minHeight: "250px",
-                width: "800px",
-              }}></div>
+              <img src={imgesquerda} alt='grafismo' className='grafismo-1-img-home' />
             </MDBCol>
           </MDBRow>
         </MDBContainer>
-      </div>
+      </section>
+
+      {/* Seção de Cases */}
+      <section className='bg-black'>
+        <MDBContainer fluid>
+          <MDBRow>
+            <MDBCol>
+              <CasesCarousel />
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+
+      {/* Seção Cuidamos Mais (wtmc)*/}
+      <section className='bg-black wtmc-section'>
+        <MDBContainer>
+          <MDBRow className='justify-content-center align-items-center gap-5'>
+            <MDBCol md={4}>
+              <h1 className='wtmc-title'>Sim, <br />
+                cuidamos <br />
+                mais
+              </h1>
+              <p className='wtmc-description'>
+                Nosso maior desafio é traduzir a imagem corporativa para a arquitetura
+              </p>
+              <div className='wtmc-card'>
+                <a className='btn-with-icon-animation wtmc-btn'>Serviços <LuCircleArrowRight size={27} /></a>
+              </div>
+            </MDBCol>
+            <MDBCol md={4}>
+              <div className='wtmc-card about-bkg'>
+                <a className='btn-with-icon-animation wtmc-btn'>Quem Somos <LuCircleArrowRight size={27} /></a>
+              </div>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+
+      <BrandsCarousel />
 
       {/* Seção do blog */}
-      <section className="py-5" style={{ backgroundColor:"#000"}}>
+      <section className="py-5" style={{ backgroundColor: "#000" }}>
         <MDBContainer>
+          <h1 className="text-center font-weight-bold default-title text-white blog-title mb-4">Blog</h1>
           <MDBRow>
             {posts.map((post, index) => (
               <MDBCol key={index} md="4" className="mb-4">
-                <MDBCard 
-                className="h-100 border-0"
-                style={{ textDecoration: 'none' , border: 'none', backgroundColor:"#000"}}
+                <MDBCard
+                  className="h-100 border-0"
+                  style={{ textDecoration: 'none', border: 'none', backgroundColor: "#000" }}
                 >
                   <MDBCardImage src={post.image} position="top" alt={post.title} />
-                  <MDBCardBody>
+                  <MDBCardBody className='m-0 p-0 blog-post-body'>
                     <MDBCardTitle>
-                      <p  style={{ textDecoration: 'none', color:"#ff6600" }}>
+                      <p style={{ textDecoration: 'none', color: "#ff6600", fontWeight: 300, textTransform: 'uppercase', fontSize: '1rem' }}>
                         Artigos
                       </p>
-                      
+
                     </MDBCardTitle>
-                    <a href="#"  className="mt-15" style={{ textDecoration: 'none', color:"white", marginBottom:"4rem"}}>
-                        {post.title}
+                    <a href="#" className="mt-15" style={{ height: '5rem', display: 'block', textDecoration: 'none', color: "white", fontWeight: 200, fontSize: '1.1rem', paddingRight: '0.7rem' }}>
+                      {post.title}
                     </a>
-                    <p className="mt-5" style={{color:"#ff6600"}}>
+                    <p style={{ color: "#ff6600", fontSize: '0.8rem' }}>
                       {post.date}
                     </p>
                   </MDBCardBody>
@@ -101,30 +132,31 @@ const Home = () => {
               </MDBCol>
             ))}
           </MDBRow>
+          <a className="btn-with-icon-animation btn-blog" href="https://sconceito.com.br/cases/">Ver todos <LuCircleArrowRight size={27} /></a>
         </MDBContainer>
       </section>
 
       {/* Seção de Contato */}
-      <div style={{ backgroundColor: "#000", color: "#fff" }} className="py-5">
+      <div style={{ backgroundColor: "#000"}} className="py-5">
         <MDBContainer>
-          <h2 className="text-start" style={{ color: "white" }}><strong>Contato</strong></h2>
-          <MDBRow className="mt-4">
+          <h1 className="text-start default-title text-white">Contato</h1>
+          <MDBRow style={{marginTop: '5rem'}}>
             {/* Coluna 1 - Telefone e Endereço */}
             <MDBCol md="4">
-              <h5 style={{ color: "#ff6600" }}>Telefone</h5>
-              <p>+55 11 9163-27532</p>
-              <h5 style={{ color: "#ff6600" }}>Endereço</h5>
-              <p>Rua Arizona, 1349 – 13º andar<br />Cidade Monções – São Paulo – SP</p>
+              <h5 className='contact-option-title'>Telefone</h5>
+              <p className='contact-option-description text-white'>+55 11 9163-27532</p>
+              <h5 className='contact-option-title'>Endereço</h5>
+              <p className='contact-option-description text-white'>Rua Arizona, 1349 – 13º andar<br />Cidade Monções – São Paulo – SP</p>
             </MDBCol>
 
             {/* Coluna 2 - Emails e Trabalhe Conosco */}
             <MDBCol md="4">
-              <h5 style={{ color: "#ff6600" }}>Email</h5>
-              <p>comercial@sconceito.com.br</p>
-              <h5 style={{ color: "#ff6600" }}>Email Fornecedores</h5>
-              <p>sc@sconceito.com.br</p>
-              <h5 style={{ color: "#ff6600" }}>Trabalhe Conosco</h5>
-              <p>Envie seu currículo</p>
+              <h5 className='contact-option-title'>Email</h5>
+              <p className='contact-option-description text-white'>comercial@sconceito.com.br</p>
+              <h5 className='contact-option-title'>Email Fornecedores</h5>
+              <p className='contact-option-description text-white'>sc@sconceito.com.br</p>
+              <h5 className='contact-option-title'>Trabalhe Conosco</h5>
+              <p className='contact-option-description text-white'>Envie seu currículo</p>
             </MDBCol>
 
             {/* Coluna 3 - Mapa */}
@@ -133,7 +165,7 @@ const Home = () => {
                 title="Mapa"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7245645692594!2d-46.69436132451962!3d-23.581499559932194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57854ce46527%3A0xcfa948726dc8d8bc!2sR.%20Arizona%2C%201349%20-%2013º%20andar%2C%20Cidade%20Monções%20-%20São%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1694717385290!5m2!1spt-BR!2sbr"
                 width="100%"
-                height="250"
+                height="300px"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -143,8 +175,6 @@ const Home = () => {
         </MDBContainer>
       </div>
 
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

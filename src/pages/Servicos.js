@@ -12,8 +12,6 @@ import bgsession2 from "../images/servicosImg/bgsession2.png";
 const Servicos = () => {
   return (
     <div>
-      <Navbar />
-
       {/* Seção de cabeçalho do serviço*/}
       <section className="bg-black text-white py-5">
         <MDBContainer>
@@ -198,8 +196,6 @@ const Servicos = () => {
           </MDBRow>
         </MDBContainer>
       </section>
-
-      <Footer />
     </div>
   );
 };

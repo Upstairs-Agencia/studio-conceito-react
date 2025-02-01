@@ -1,154 +1,194 @@
-import React, { useState } from "react";
-
-import Logo from "../images/logoBlack.png";
-
+import React, { useState, useEffect } from "react";
 import {
   MDBNavbar,
   MDBNavbarBrand,
   MDBContainer,
 } from "mdb-react-ui-kit";
-import { FaLinkedin, FaInstagram, FaPinterest, FaBars } from "react-icons/fa";
-import { IoIosClose } from "react-icons/io";
+import { useLocation } from "react-router-dom";
+import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
+import { FaLinkedinIn, FaPinterestP, FaInstagram, FaBars } from "react-icons/fa6";
 import SeloGptw from "../images/selo-gptw.png";
+import LogoWhite from "../images/logoWhite.png";
+import LogoBlack from "../images/logoBlack.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
+  const mobileOptions = [
+    { label: "Home", link: "/" },
+    { label: "Quem somos", link: "/quem-somos" },
+    { label: "Serviços", link: "/servicos" },
+    { label: "Cases", link: "/cases" },
+    { label: "Blog", link: "/blog" },
+    { label: "Clientes", link: "/clientes" },
+    { label: "Contato", link: "/contato" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Esconde a navbar ao rolar para baixo
+        setIsNavbarHidden(true);
+      } else {
+        // Mostra a navbar ao rolar para cima
+        setIsNavbarHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    // Adiciona o evento de rolagem
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // Remove o evento ao desmontar o componente
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <>
       {/* Navbar */}
-      <MDBNavbar dark bgColor="white" className="py-4 px-5">
+      <MDBNavbar
+        dark
+        bgColor={location.pathname === '/' ? "black" : 'white'}
+        sticky
+        className={`px-3 transition-navbar ${isNavbarHidden ? "navbar-hidden" : ""
+          }`}
+      >
         <MDBContainer fluid className="d-flex justify-content-between align-items-center">
           {/* Logo */}
-          <MDBNavbarBrand href="#" className="ms-5">
-            <img
-              src={Logo}
-              alt="Logo"
-              style={{ maxHeight: "90px", marginLeft: "12vw"}}
-            />
+          <MDBNavbarBrand href="#">
+            <img src={location.pathname === '/' ? LogoWhite : LogoBlack} alt="Logo" className="navbar-logo" />
           </MDBNavbarBrand>
 
-          {/* Social Icons and Menu Toggle */}
-          <div className="d-flex align-items-center">
-            {/* Social Icons */}
-            <div className="d-flex gap-3 me-3">
-              <button className="btn btn-light rounded-circle p-2">
-                <FaLinkedin size={30} />
-              </button>
-              <button className="btn btn-light rounded-circle p-2">
-                <FaInstagram size={30} />
-              </button>
-              <button className="btn btn-light rounded-circle p-2">
-                <FaPinterest size={30} />
-              </button>
-            </div>
-
-            {/* FaBars Icon for Sidebar */}
-            <button
-              className="btn rounded-circle p-2"
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
-              onClick={() => setShowMenu(!showMenu)}
+          {/* Social Icons */}
+          <div className="d-flex align-items-center gap-4 navbar-content">
+            <a
+              className={`btn-social-navbar rounded-circle p-2 ${location.pathname === '/' ? "bg-white text-black" : 'bg-black text-white'}`}
+              href="https://www.linkedin.com/company/studio-conceito-arquitetura"
+              target="_blank"
+              rel="noreferrer"
             >
-              <FaBars size={20} color="black" />
-            </button>
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
+              className={`btn-social-navbar rounded-circle p-2 ${location.pathname === '/' ? "bg-white text-black" : 'bg-black text-white'}`}
+              href="https://www.instagram.com/sconceitoarquitetura/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              className={`btn-social-navbar rounded-circle p-2 ${location.pathname === '/' ? "bg-white text-black" : 'bg-black text-white'}`}
+              href="https://br.pinterest.com/StudioConceitoArq/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaPinterestP size={18} />
+            </a>
           </div>
         </MDBContainer>
       </MDBNavbar>
 
-      {/* Sidebar Menu */}
+      {/* Toggle Button (Fixado no topo) */}
+      <button
+        className="toggle-navbar-btn p-2"
+        style={{
+          color: location.pathname === '/' ? "white" : 'black',
+          border: "none",
+          cursor: "pointer",
+        }}
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <FaBars size={23} />
+      </button>
+
+      {/* Overlay + Sidebar */}
       {showMenu && (
-        <div
-          className="position-fixed top-0 end-0 bg-white vh-100 vw-350 shadow-lg d-flex flex-column"
-          style={{ zIndex: 1050, width: "500px" }}
-        >
-          <div className="d-flex justify-content-end p-3">
-            {/* Close Button */}
-            <button
-              className="p-0"
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
-              onClick={() => setShowMenu(false)}
-            >
-              <IoIosClose size={40} />
-            </button>
-          </div>
-
-          
-
-
-
-          <div className="p-4 flex-grow-1">
-            {/* Menu Items */}
-            <ul className="list-unstyled">
-              {[
-                { label: "Home", link: "/" },
-                { label: "Quem somos", link: "/quem-somos" },
-                { label: "Serviços", link: "/servicos" },
-                { label: "Cases", link: "/cases" },
-                { label: "Blog", link: "/blog" },
-                { label: "Clientes", link: "/clientes" },
-                { label: "Contato", link: "/contato" },
-              ].map((item, index) => (
-                <li key={index} className="py-2">
-                  <Link
-                    to={item.link}
-                    className="text-decoration-none fs-6"
-                    style={{
-                      transition: "all 0.3s ease-in-out", // Transição suave
-                      color:"black"
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.color = "#FF7F30"; // Altera a cor
-                      e.currentTarget.style.fontWeight = "bold"; // Negrito
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.color = "black"; // Retorna à cor original
-                      e.currentTarget.style.fontWeight = "normal"; // Retira o negrito
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-
-
-          {/* Footer Section */}
-          <div className="d-flex justify-content-between align-items-center px-4 pb-4">
-            {/* Social Icons */}
-            <div className="d-flex gap-3">
-              <button className="btn btn-dark rounded-circle p-2">
-                <FaLinkedin size={20} color="white" />
-              </button>
-              <button className="btn btn-dark rounded-circle p-2">
-                <FaInstagram size={20} color="white" />
-              </button>
-              <button className="btn btn-dark rounded-circle p-2">
-                <FaPinterest size={20} color="white" />
-              </button>
-            </div>
-
-            {/* Placeholder Image */}
-            <img
-              src={SeloGptw}
-              alt="Great Place to Work"
-              style={{ maxHeight: "200px", marginBottom: "4rem" }}
-            />
-          </div>
-        </div>
+        <>
+          {/* Overlay */}
+          <div
+            className="position-fixed top-0 start-0 w-100 h-100 bg-dark"
+            onClick={() => setShowMenu(false)} // Fecha ao clicar fora da sidebar
+          ></div>
+        </>
       )}
+
+      {/* Sidebar */}
+      <div
+        className={`sidebar-content ${showMenu ? "show" : ""}`}
+      >
+        <div className="d-flex justify-content-end p-2">
+          {/* Close Button */}
+          <button
+            className="p-0 toggle-btn-sidebar"
+            onClick={() => setShowMenu(false)}
+          >
+            <IoClose size={40} />
+          </button>
+        </div>
+
+        <div className="navbar-sidebar-content">
+          {/* Menu Items */}
+          <ul className="list-unstyled">
+            {mobileOptions.map((item, index) => (
+              <li key={index} className="py-2">
+                <Link
+                  to={item.link}
+                  onClick={() => setShowMenu(false)}
+                  className="text-decoration-none sidebar-content-item fs-6"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="d-flex justify-content-between align-items-center">
+          {/* Social Icons */}
+          <div className="d-flex align-items-center gap-3 navbar-social-sidebar">
+            <a
+              className="btn-social-sidebar rounded-circle p-2"
+              href="https://www.linkedin.com/company/studio-conceito-arquitetura"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
+              className="btn-social-sidebar rounded-circle p-2"
+              href="https://www.instagram.com/sconceitoarquitetura/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              className="btn-social-sidebar rounded-circle p-2"
+              href="https://br.pinterest.com/StudioConceitoArq/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaPinterestP size={18} />
+            </a>
+          </div>
+          <img
+            src={SeloGptw}
+            alt="Great Place to Work"
+            className="gptw-selo-sidebar"
+          />
+        </div>
+      </div>
     </>
+
   );
 };
 

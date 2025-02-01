@@ -111,7 +111,6 @@ const caseStudies = [
 function Cases() {
   return (
     <div style={{ backgroundColor: "black" }}>
-      <Navbar/>
       <MDBContainer className="my-5">
         <h1
           className="mb-4"
@@ -146,7 +145,6 @@ function Cases() {
           ))}
         </MDBRow>
       </MDBContainer>
-      <Footer />
     </div>
   );
 }

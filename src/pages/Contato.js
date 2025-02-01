@@ -15,7 +15,6 @@ const ContactPage = () => {
         minHeight: "100vh",
       }}
     >
-      <Navbar />
       <MDBContainer className="text-white py-5">
         <MDBRow className="justify-content-center">
           <MDBCol md="8" className="bg-black p-4 rounded">
@@ -62,7 +61,6 @@ const ContactPage = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <Footer />
     </div>
   );
 };

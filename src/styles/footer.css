@@ -1,21 +1,18 @@
 .footer-container {
     background-color: white;
-    height: 25vh !important; /* Ocupa 30% da altura da tela */
+    min-height: 25vh !important; /* Ocupa 30% da altura da tela */
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: solid 1px #c9c9c9 ;
     color: black;
-    font-family: Arial, sans-serif;
-    margin: 1rem 0;
   }
   
   .footer-content {
-    height: 100%; /* Garante que o conteúdo ocupe toda a altura do footer */
-  }
-
-  .content-signature{
-    display: flex;
-    flex-direction: row;
+    min-height: 100%; 
+    padding-top: 1rem !important;
+    padding-right: 1rem !important;
+    padding-left:  1rem !important;
   }
   
   .footer-left {
@@ -24,22 +21,30 @@
   }
   
   .footer-logo {
-    max-width: 40%; /* Aumenta a imagem para 40% de seu tamanho */
-    margin-bottom: 10px;
+    max-width: 28%; /* Aumenta a imagem para 40% de seu tamanho */
+    margin-bottom: 0.5rem;
   }
 
+  .footer-no-margin {
+    margin: 0 !important;
+  }
   
+  .footer-no-padding {
+    padding: 0 !important;
+  }
+
   .footer-center {
-    text-align: center;
-    margin: 2rem 0;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    font-weight: 300 !important;
+    font-size: 0.95rem;
   }
 
   .footer-nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width:35vw;
-    
+    justify-content: start;  
+    gap: 1rem;  
   }
 
   .footerHighlight {
@@ -47,7 +52,6 @@
   }
   
   .footer-nav a {
-    margin: 1px 1rem;
     text-decoration: none;
     color: #000;
     font-size: 1rem;
@@ -60,13 +64,24 @@
   
   
   
-  .footer-right {
-    text-align: center;
+  .footer-copyright {
+    text-align: right !important;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 0.9rem;
+    color: #000;
+  }
+
+  .footer-copyright a{
+    font-size: 1.15rem !important;
+    font-weight: 200 !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20vw;
-    font-size: 0.9rem;
-    color: #000;
+    gap: 1rem;
+    width: 48%;
+    margin-bottom: 1rem;
   }
   
