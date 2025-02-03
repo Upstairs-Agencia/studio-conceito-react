@@ -1,3 +1,12 @@
+.page-header-about {
+  background-color: #000000;
+  background-image: url("../images/quemsomosImg/header_quem-somos-1.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 5rem 0 !important;
+}
+
 .all {
   background-color: #fff;
 }
@@ -7,7 +16,8 @@
 }
 
 .titulosocios {
-  margin-left: 7rem;
+  margin-left: 1rem;
+  font-size: 2.6rem;
 }
 .imagemfundo {
   width: 100% !important;
@@ -27,16 +37,7 @@
 .brasil-title {
   font-weight: bold;
   color: #000;
-  margin-top: -10px; /* Para aproximar os textos */
-}
-
-/* Texto em letras maiores */
-.text-large {
-  font-size: 20px;
-  line-height: 1.8;
-  text-align: left;
-  color: #000;
-  font-weight: 300;
+  margin-top: -10px;
 }
 
 .atendimento-row {
@@ -193,6 +194,65 @@
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.team-member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem !important;
+}
+
+.team-member .description {
+  text-align: left !important;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100%;
+}
+
+.team-member img {
+  transition: scale 0.3s ease !important;
+  scale: 100%;
+  border-radius: 30px;
+}
+
+.team-member img:hover {
+  scale: 105%;
+}
+
+.intro-section-about{
+  padding: 0 !important;
+  padding-top: 4rem !important;
+  padding-bottom: 5rem !important;
+  background-image: url("../images/quemsomosImg/BackgroundEndsession.png");
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.intro-section-about img {
+  border-radius: 15px;
+}
+
+.intro-section-about h2,p{
+  padding: 0;
+  margin: 0; 
+  word-spacing: 0.1rem;
+}
+
+.intro-section-about h2 {
+  color: black;
+  font-size: 2.7rem !important;
+  margin-bottom: 0.8rem !important;  
+  margin-top: 3.5rem !important;
+}
+
+.intro-section-about p {
+  line-height: 2rem !important;
+  padding-right: 1rem !important;
 }
 
 /* Responsividade */

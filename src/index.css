@@ -174,7 +174,7 @@ body {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 725px;
+  height: 98vh;
   overflow: hidden;
   margin-top: -5rem;
 }
@@ -184,7 +184,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 130vh;
   z-index: -1;
 }
 
@@ -204,6 +204,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.selo-gptw-container-home {
+  height: 100% !important;
+  width: auto !important;
+  display: flex;
+  align-items: start;
+  padding-top: 5rem !important;
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(21, 21, 21);
+  border: 2px solid rgb(255, 255, 255);
+  backdrop-filter: blur(5px);
+  width: 40px !important;
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  animation: fade 1.5s infinite alternate;
+  z-index: 3;
+}
+
+.icon {
+  color: white;
+  font-size: 1.6rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .hero-title {
@@ -467,7 +507,7 @@ h4 {
 .btn-blog {
   font-size: 1.4rem !important;
   text-transform: uppercase !important;
-  font-weight: 300 !important;  
+  font-weight: 300 !important;
 }
 
 .contact-option-title {
@@ -483,3 +523,174 @@ h4 {
   margin-bottom: 3rem;
   font-size: 1.2rem !important;
 }
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-large {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+  color: #000;
+  font-weight: 300;
+}
+
+.bg-white-default {
+  background-color: #f9f9f9 !important;
+}
+
+.page-header-services {
+  background-color: #000000;
+  color: white;
+  padding: 4.5rem 0 !important;
+}
+
+.projetar-contruir-section {
+  padding-bottom: 5rem !important;
+}
+
+.intro-container-services h1 {
+  padding-top: 1.5rem;
+}
+
+.intro-container-services p {
+  padding-right: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.intro-container-services img {
+  border-radius: 15px;
+}
+
+.project-services-container {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  width: 95%;
+  left: 2rem;
+  height: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  top: -130px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.project-services-container h1 {
+  padding-bottom: 1rem;
+}
+
+.project-services-container p {
+  margin-bottom: 1rem !important;
+  word-spacing: 0.03rem !important;
+  font-size: 18px;
+}
+
+.projetos-section {
+  background-image: url("images/servicosImg/Background.png");
+  background-size: cover;
+  background-position: -50px 2px;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem;
+  max-height: 95vh !important;
+}
+
+.destaques-section {
+  background-image: url("images/servicosImg/Backgroundblack.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  height: 95vh !important;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.destaques-section .item-list {
+  font-size: 1.15rem !important;
+  font-weight: 200 !important;
+}
+
+.obras-section {
+  background-image: url("images/servicosImg/bgsession2.png"); /* Substitua pelo caminho correto */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 100vh;
+  padding: 5rem 0;
+  padding-bottom: 4rem;
+}
+
+.obras-section h1 {
+  margin-bottom: 1rem !important;
+  font-size: 2.7rem !important;
+}
+
+.obras-section p {
+  font-size: 19px !important;
+  padding-right: 3rem !important;
+  word-spacing: 0.03rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.obras-section img {
+  border-radius: 15px !important;
+}
+
+.planejamento-section {
+  background-image: url("images/servicosImg/finalimg.png");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.planejamento-section .item-list {
+  font-size: 1.15rem !important;
+  font-weight: 200 !important;
+}
+
+.page-header-client {
+  background-color: #000000;
+  background-image: url("images/clientesImg/header_clientes_1-1.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 5rem 0 !important;
+}
+
+.client-collumn {
+  width: "250px" !important;
+}
+
+.contato-info-container {
+  min-height: 70vh;
+  margin-top: 4rem;
+  padding: 2rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.contato-info-container h1 {
+  margin-top: 1rem;
+}
+
+.contato-info-container h5 {
+  margin-top: 2rem;
+}
+
+.contato-info-container p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.1rem !important;
+}
+
+.contact-option-description a {
+  color: white !important;
+  transition: transform 0.3s ease;
+}
+
+.contato-info-container a:hover {
+  opacity: 0.6;
+}
+

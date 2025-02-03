@@ -1,10 +1,11 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle } from 'mdb-react-ui-kit';
-import imgesquerda from '../images/homeImg/Grupo-de-mascara-3-1.png';
 import CasesCarousel from '../components/casesCarousel';
 import { LuCircleArrowRight } from "react-icons/lu";
+import { HiOutlineChevronDown } from "react-icons/hi2";
 import BrandsCarousel from '../components/BrandsCarousel';
-
+import imgesquerda from '../images/homeImg/Grupo-de-mascara-3-1.png';
+import SeloGptw from "../images/selo-gptw.png";
 
 const Home = () => {
 
@@ -38,6 +39,12 @@ const Home = () => {
               <h1 className="hero-main-text">CORPORATIVA</h1>
             </div>
           </MDBContainer>
+          <div className='selo-gptw-container-home'>
+            <img src={SeloGptw} alt={'Selo GPTW'} width={'120px'} height={'auto'} />
+          </div>
+          <a href='#intro' className="scroll-button">
+            <HiOutlineChevronDown className="icon" />
+          </a>
         </div>
         <div className="fade-overlay"></div>
       </div>
@@ -48,7 +55,7 @@ const Home = () => {
         <MDBContainer fluid>
           <MDBRow className="align-items-center gap-0">
             {/* Texto à esquerda */}
-            <MDBCol md="6" className="position-relative intro-home-col d-flex justify-content-center align-items-center">
+            <MDBCol md="6" className="position-relative intro-home-col d-flex justify-content-center align-items-center" id='intro'>
               <div className="intro-home-border">
                 <p className="mb-0 intro-home-text">
                   Nossa equipe multidisciplinar, composta por <strong>Arquitetos</strong>, <strong>Engenheiros</strong> e <strong>Designers</strong>, apresenta as melhores soluções para <strong>projetos</strong> e <strong>obras</strong> corporativas.
@@ -88,12 +95,12 @@ const Home = () => {
                 Nosso maior desafio é traduzir a imagem corporativa para a arquitetura
               </p>
               <div className='wtmc-card'>
-                <a className='btn-with-icon-animation wtmc-btn'>Serviços <LuCircleArrowRight size={27} /></a>
+                <a href='/servicos' className='btn-with-icon-animation wtmc-btn'>Serviços <LuCircleArrowRight size={27} /></a>
               </div>
             </MDBCol>
             <MDBCol md={4}>
               <div className='wtmc-card about-bkg'>
-                <a className='btn-with-icon-animation wtmc-btn'>Quem Somos <LuCircleArrowRight size={27} /></a>
+                <a href='/quem-somos' className='btn-with-icon-animation wtmc-btn'>Quem Somos <LuCircleArrowRight size={27} /></a>
               </div>
             </MDBCol>
           </MDBRow>
@@ -103,7 +110,7 @@ const Home = () => {
       <BrandsCarousel />
 
       {/* Seção do blog */}
-      <section className="py-5" style={{ backgroundColor: "#000" }}>
+      <section style={{ backgroundColor: "#000", paddingBottom: '6.5rem', paddingTop: '2rem' }}>
         <MDBContainer>
           <h1 className="text-center font-weight-bold default-title text-white blog-title mb-4">Blog</h1>
           <MDBRow>
@@ -121,7 +128,7 @@ const Home = () => {
                       </p>
 
                     </MDBCardTitle>
-                    <a href="#" className="mt-15" style={{ height: '5rem', display: 'block', textDecoration: 'none', color: "white", fontWeight: 200, fontSize: '1.1rem', paddingRight: '0.7rem' }}>
+                    <a href="#!" className="mt-15" style={{ height: '5rem', display: 'block', textDecoration: 'none', color: "white", fontWeight: 200, fontSize: '1.1rem', paddingRight: '0.7rem' }}>
                       {post.title}
                     </a>
                     <p style={{ color: "#ff6600", fontSize: '0.8rem' }}>
@@ -137,26 +144,27 @@ const Home = () => {
       </section>
 
       {/* Seção de Contato */}
-      <div style={{ backgroundColor: "#000"}} className="py-5">
+      <div style={{ backgroundColor: "#000" }} className="py-5">
         <MDBContainer>
           <h1 className="text-start default-title text-white">Contato</h1>
-          <MDBRow style={{marginTop: '5rem'}}>
+          <MDBRow style={{ marginTop: '5rem' }}>
             {/* Coluna 1 - Telefone e Endereço */}
             <MDBCol md="4">
               <h5 className='contact-option-title'>Telefone</h5>
-              <p className='contact-option-description text-white'>+55 11 9163-27532</p>
+              <p className='contact-option-description text-white'><a href='https://wa.me/5511916327532' target="_blank" rel='noreferrer'>+55 11 9163-27532</a></p>
               <h5 className='contact-option-title'>Endereço</h5>
-              <p className='contact-option-description text-white'>Rua Arizona, 1349 – 13º andar<br />Cidade Monções – São Paulo – SP</p>
+              <p className='contact-option-description text-white' target="_blank" rel='noreferrer'><a href="https://www.google.com/maps/place/R.+Arizona,+1349+-+13%C2%BA+andar+-+Cidade+Mon%C3%A7%C3%B5es,+S%C3%A3o+Paulo+-+SP,+04567-003/@-23.6107968,-46.6964559,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce50cbee905755:0x1f0707eec8c48307!8m2!3d-23.6107968!4d-46.693881!16s%2Fg%2F11qpkl_lfp?entry=ttu">
+              Rua Arizona, 1349 – 13º andar<br />Cidade Monções – São Paulo – SP</a></p>
             </MDBCol>
 
             {/* Coluna 2 - Emails e Trabalhe Conosco */}
             <MDBCol md="4">
               <h5 className='contact-option-title'>Email</h5>
-              <p className='contact-option-description text-white'>comercial@sconceito.com.br</p>
+              <p className='contact-option-description text-white'><a href="mailto:comercial@sconceito.com.br">comercial@sconceito.com.br</a></p>
               <h5 className='contact-option-title'>Email Fornecedores</h5>
-              <p className='contact-option-description text-white'>sc@sconceito.com.br</p>
+              <p className='contact-option-description text-white'><a href="mailto:sc@sconceito.com.br">sc@sconceito.com.br</a></p>
               <h5 className='contact-option-title'>Trabalhe Conosco</h5>
-              <p className='contact-option-description text-white'>Envie seu currículo</p>
+              <p className='contact-option-description text-white' target="_blank" rel='noreferrer'><a href="https://studioconceito.vagas.solides.com.br/">Envie seu currículo</a></p>
             </MDBCol>
 
             {/* Coluna 3 - Mapa */}

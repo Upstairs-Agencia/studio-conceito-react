@@ -1,18 +1,14 @@
 import React from "react";
-import Navbar from "../components/navbar"; // Importando o componente Navbar
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { FiEye, FiHeart } from "react-icons/fi";
 import { LiaBullseyeSolid } from "react-icons/lia";
-
-import Footer from "../components/footer";
 import "../styles/quemsomos.css";
-
 import Escritorio from '../images/quemsomosImg/escritorioImg.png';
-import Bgbottom from '../images/quemsomosImg/BackgroundEndsession.png';
 import socio1 from '../images/quemsomosImg/socioCristina.png';
 import socio2 from '../images/quemsomosImg/socioCastilho.png';
 import graficoDiversidadeSocios from '../images/quemsomosImg/diversidade-socios-grafico.png';
 import graficoDiversidadeColaboradores from '../images/quemsomosImg/diversidade-colaboradores-grafico.png';
+import { FaLinkedinIn } from "react-icons/fa6";
 
 export default function QuemSomos() {
   return (
@@ -20,27 +16,20 @@ export default function QuemSomos() {
       <div className="all">
 
         {/* Seção de cabeçalho do quem somos */}
-        <section className="bg-black text-white py-5">
+        <section className="bg-black text-white page-header-about">
           <MDBContainer>
             <MDBRow className="align-items-center">
               <MDBCol md="6">
-                <h1 className="fw-bold">Quem somos</h1>
-              </MDBCol>
-              <MDBCol md="6" className="text-end">
-                <img
-                  src="https://placehold.co/200x150" // Imagem maior para seguir o padrão original
-                  alt="Padrão gráfico"
-                  style={{ maxWidth: "200px", marginRight: "4rem" }}
-                />
+                <h1 className="fw-bold p-0 m-0">Quem somos</h1>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
         </section>
 
         {/* Quem Somos Section */}
-        <section className="py-5 ">
+        <section className="intro-section-about">
           <MDBContainer>
-            <MDBRow className="align-items-center">
+            <MDBRow className="justify-content-center">
               <MDBCol md="6">
                 <img
                   src={Escritorio}
@@ -48,16 +37,17 @@ export default function QuemSomos() {
                   className="img-fluid"
                 />
               </MDBCol>
-              <MDBCol md="6">
+              <MDBCol md="6" className="intro-text-container">
                 <h2 className="fw-bold mb-4">Studio Conceito</h2>
-                <p>
+                <p className="text-large">
                   A Studio Conceito Arquitetura foi{" "}
-                  <strong>fundada em 2009</strong> e conta com uma equipe
+                  <span className="fw-bold">fundada em 2009</span> e conta com uma equipe
                   altamente capacitada e com grande experiência na área
                   corporativa.
                 </p>
-                <p>
-                  O <strong>Atendimento Personalizado</strong> é o grande foco
+                <br />
+                <p className="text-large">
+                  O <span className="fw-bold">Atendimento Personalizado</span> é o grande foco
                   de nossa empresa, visando sempre garantir a satisfação e a
                   consequente fidelização de nossos clientes.
                 </p>
@@ -66,17 +56,12 @@ export default function QuemSomos() {
           </MDBContainer>
 
         </section>
-        <img
-          src={Bgbottom}
-          alt="Studio Conceito"
-          className="imagemfundo"
-        />
 
         {/* Sócios Section */}
         <section className="py-5 socios text-white">
           <MDBContainer>
-            <h1 className="text-left titulosocios fw-bold mb-5">Sócios</h1>
-            <MDBRow className="text-center">
+            <h1 className="text-left titulosocios fw-bold mt-4">Sócios</h1>
+            <MDBRow className="text-center justify-content-between align-items-center">
               <MDBCol md="6" className="mb-4">
                 <div className="team-member">
                   <img
@@ -84,8 +69,20 @@ export default function QuemSomos() {
                     alt="Arq. Cristina Castilho"
                     className="img-fluid mb-2"
                   />
-                  <h4 className="fw-bold">Arq. Cristina Castilho</h4>
-                  <p>CEO | Sócia fundadora</p>
+                  <div className="description">
+                    <div>
+                      <h4 className="fw-bold">Arq. Cristina Castilho</h4>
+                      <p>CEO | Sócia fundadora</p>
+                    </div>
+                    <a
+                      className="btn-social-navbar bg-white rounded-circle p-2"
+                      href="https://www.linkedin.com/in/cristina-castilho-46b72714/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaLinkedinIn size={18} />
+                    </a>
+                  </div>
                 </div>
               </MDBCol>
               <MDBCol md="6" className="mb-4">
@@ -95,8 +92,20 @@ export default function QuemSomos() {
                     alt="Arq. Gabriel Castilho"
                     className="img-fluid mb-2"
                   />
-                  <h4 className="fw-bold">Arq. Gabriel Castilho</h4>
-                  <p>COO | Sócio fundador</p>
+                  <div className="description">
+                    <div>
+                      <h4 className="fw-bold">Arq. Gabriel Castilho</h4>
+                      <p>COO | Sócio fundador</p>
+                    </div>
+                    <a
+                      className="btn-social-navbar bg-white rounded-circle p-2"
+                      href="https://www.linkedin.com/in/gabriel-castilho-7434a016/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaLinkedinIn size={18} />
+                    </a>
+                  </div>
                 </div>
               </MDBCol>
             </MDBRow>
@@ -110,7 +119,7 @@ export default function QuemSomos() {
               <MDBCol md="6" className="title-container">
                 <h1 className="atendemos-title">Atendemos</h1>
                 <h1 className="brasil-title">em todo Brasil</h1>
-                <div className="divider d-inline-block" style={{width: '34%'}}></div>
+                <div className="divider d-inline-block" style={{ width: '34%' }}></div>
               </MDBCol>
               <MDBCol md="6">
                 <p className="text-large">
@@ -205,16 +214,16 @@ export default function QuemSomos() {
           {/* Diversidade Section */}
           <section className="diversidade-section">
             <MDBContainer>
-              <MDBRow className="align-items-center justify-content-between diversidade-row">            
+              <MDBRow className="align-items-center justify-content-between diversidade-row">
                 <MDBCol md="5" className="d-flex flex-column diversidade-text m-0 p-0">
-                <p className="text-left">
-                  A Studio Conceito tem seu quadro societário, e sua equipe de
-                  colaboradores, constituído por uma{" "}
-                  <span className="destaque">
-                    maioria de pessoas do gênero feminino.
-                  </span>
-                </p>
-              </MDBCol>
+                  <p className="text-left">
+                    A Studio Conceito tem seu quadro societário, e sua equipe de
+                    colaboradores, constituído por uma{" "}
+                    <span className="destaque">
+                      maioria de pessoas do gênero feminino.
+                    </span>
+                  </p>
+                </MDBCol>
                 <MDBCol md="7" className="d-flex justify-content-center">
                   <div className="chart-container">
                     <img src={graficoDiversidadeSocios} className="grafico-img-socios" alt="Gráfico de diversidade - Sócios" />

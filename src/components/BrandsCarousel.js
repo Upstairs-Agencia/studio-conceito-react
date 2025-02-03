@@ -64,7 +64,7 @@ const BrandsCarousel = () => {
                     ))}
                 </Swiper>
                 <div className="text-center mt-3">
-                    <a className="btn-with-icon-animation btn-clients" href="https://sconceito.com.br/cases/">Ver todos <LuCircleArrowRight size={27} /></a>
+                    <a className="btn-with-icon-animation btn-clients" href="/clientes">Ver todos <LuCircleArrowRight size={27} /></a>
                 </div>
             </MDBContainer>
         </section>

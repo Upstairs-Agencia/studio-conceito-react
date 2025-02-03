@@ -1,9 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import backgroundMap from "../images/ContactBg.png"; // Ajuste o caminho da imagem
-import logoImage from "../images/logoBlack.png"; // Ajuste o caminho do logo
+import backgroundMap from "../images/ContactBg.png";
 
 const ContactPage = () => {
   return (
@@ -15,49 +12,31 @@ const ContactPage = () => {
         minHeight: "100vh",
       }}
     >
-      <MDBContainer className="text-white py-5">
-        <MDBRow className="justify-content-center">
-          <MDBCol md="8" className="bg-black p-4 rounded">
-            <div className="text-center mb-4">
-              <img src={logoImage} alt="Studio Conceito Logo" style={{ width: "150px" }} />
-            </div>
-            <h1><strong className="text-white mb-3" style={{textAlign: "left"}}>Contato</strong></h1>
-            <MDBRow>
-              <MDBCol md="6" className="text-white">
-                <p>
-                  <strong style={{color: `#ff6600`}}>TELEFONE</strong>
-                  <br />
-                  +55 11 9163-27532
-                  <br />
-                  +55 11 2364-7151
-                </p>
-                <p>
-                  <strong style={{color: `#ff6600`}}>EMAIL</strong>
-                  <br />
-                  comercial@sconceito.com.br
-                </p>
-                <p>
-                  <strong style={{color: `#ff6600`}}>ENDEREÇO</strong>
-                  <br />
-                  Rua Arizona, 1349 – 13º andar
-                  <br />
-                  Cidade Monções – São Paulo – SP
-                </p>
+      <MDBContainer>
+        <MDBRow className="align-items-center">
+          <MDBCol md={9} className="bg-black contato-info-container">
+            <h1 className="text-start default-title text-white">Contato</h1>
+            <MDBRow className="align-items-center justify-content-between">
+              {/* Coluna 1 - Telefone e Endereço */}
+              <MDBCol md="6">
+                <h5 className='contact-option-title'>Telefone</h5>
+                <p className='contact-option-description text-white'><a href='https://wa.me/5511916327532' target="_blank" rel='noreferrer'>+55 11 9163-27532</a></p>
+                <p className='contact-option-description text-white'><a href="tel:1123647151">+55 11 2364-7151</a></p>
+                <h5 className='contact-option-title'>Email</h5>
+                <p className='contact-option-description text-white'><a href="mailto:comercial@sconceito.com.br" target="_blank" rel='noreferrer'>comercial@sconceito.com.br</a></p>
+                <h5 className='contact-option-title'>Endereço</h5>
+                <p className='contact-option-description text-white'><a target="_blank" rel='noreferrer' href="https://www.google.com/maps/place/R.+Arizona,+1349+-+13%C2%BA+andar+-+Cidade+Mon%C3%A7%C3%B5es,+S%C3%A3o+Paulo+-+SP,+04567-003/@-23.6107968,-46.6964559,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce50cbee905755:0x1f0707eec8c48307!8m2!3d-23.6107968!4d-46.693881!16s%2Fg%2F11qpkl_lfp?entry=ttu">Rua Arizona, 1349 – 13º andar<br />Cidade Monções – São Paulo – SP</a></p>
               </MDBCol>
-              <MDBCol md="6" className="text-white">
-                <p>
-                  <strong style={{color: `#ff6600`}}> EMAIL FORNECEDORES</strong>
-                  <br />
-                  sc@sconceito.com.br
-                </p>
-                <p>
-                  <strong style={{color: `#ff6600`}}>TRABALHE CONOSCO</strong>
-                  <br />
-                  Envie seu currículo
-                </p>
+
+              {/* Coluna 2 - Emails e Trabalhe Conosco */}
+              <MDBCol md="5">
+
+                <h5 className='contact-option-title'>Email Fornecedores</h5>
+                <p className='contact-option-description text-white'><a href="mailto:sc@sconceito.com.br">sc@sconceito.com.br</a></p>
+                <h5 className='contact-option-title'>Trabalhe Conosco</h5>
+                <p className='contact-option-description text-white'><a href="https://studioconceito.vagas.solides.com.br/" target="_blank" rel='noreferrer'>Envie seu currículo</a></p>
               </MDBCol>
             </MDBRow>
-        
           </MDBCol>
         </MDBRow>
       </MDBContainer>
