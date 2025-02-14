@@ -24,9 +24,9 @@ const Servicos = () => {
       {/* Sessão Projetar e Construir */}
       <section className="py-5 bg-white-default projetar-contruir-section">
         <MDBContainer>
-          <MDBRow className="align-items-center justify-content-between px-2">
+          <h1 className="fw-bold mb-3 text-black intro-container-services-h1 ">Projetar<br />e Construir</h1>
+          <MDBRow className="align-items-center justify-content-between px-2 row-intro-container-services">
             <MDBCol md="5" className="mb-4 intro-container-services">
-              <h1 className="fw-bold mb-3 text-black">Projetar<br />e Construir</h1>
               <p className='text-large'>
                 Transformamos sonhos em projetos e materializamos projetos em patrimônio físico e tangível.
               </p>
@@ -59,6 +59,7 @@ const Servicos = () => {
             <MDBCol md={5}>
               <div className='project-services-container'>
                 <h1 className="fw-bold">Projetos</h1>
+                <img src='images/servicosImg/projetos-1024x438.jpg' className='desktop-hidden img-project-services-mobile img-fluid' />
                 <p className='text-white text-large'>
                   Nosso grande desafio é traduzir a imagem corporativa para a arquitetura, compreendendo o universo e a história de cada cliente. Priorizamos os colaboradores com o objetivo de aumentar a satisfação, bem estar e consequente elevação da produtividade.
                 </p>
@@ -121,10 +122,16 @@ const Servicos = () => {
                 alt="Obras"
                 width={'auto'}
                 height={'100%'}
+                className='mobile-hidden'
               />
             </MDBCol>
             <MDBCol md="6" className="text-Black">
               <h1 className="fw-bold text-black">Obras</h1>
+              <img
+                src={'/images/servicosImg/studio-conceito-servicos.jpg'}
+                alt="Obras"
+                className='desktop-hidden img-fluid img-obras-servicos'
+              />
               <p className='text-large'>
                 Nosso Departamento de Obras conta com grupos de <span className='fw-bold'> engenheiros </span> e <span className='fw-bold'> arquitetos </span>que executam e gerenciam nossos projetos e de terceiros.
               </p>

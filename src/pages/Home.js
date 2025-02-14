@@ -32,7 +32,7 @@ const Home = () => {
         </div>
 
         <div className="overlay">
-          <MDBContainer className="text-white">
+          <MDBContainer className="text-white title-container-home">
             <h1 className="hero-title">ARQUITETURA</h1>
             <div className='hero-subtitle-container'>
               <h4 className="hero-subtitle">DESDE 2009</h4>
@@ -88,7 +88,7 @@ const Home = () => {
           <MDBRow className='justify-content-center align-items-center gap-5'>
             <MDBCol md={4}>
               <h1 className='wtmc-title'>Sim, <br />
-                cuidamos <br />
+                cuidamos <br className='mobile-hidden' />
                 mais
               </h1>
               <p className='wtmc-description'>
@@ -128,7 +128,7 @@ const Home = () => {
                       </p>
 
                     </MDBCardTitle>
-                    <a href="#!" className="mt-15" style={{ height: '5rem', display: 'block', textDecoration: 'none', color: "white", fontWeight: 200, fontSize: '1.1rem', paddingRight: '0.7rem' }}>
+                    <a href="#!" className="blog-home-title">
                       {post.title}
                     </a>
                     <p style={{ color: "#ff6600", fontSize: '0.8rem' }}>
@@ -146,7 +146,7 @@ const Home = () => {
       {/* Seção de Contato */}
       <div style={{ backgroundColor: "#000" }} className="py-5">
         <MDBContainer>
-          <h1 className="text-start default-title text-white">Contato</h1>
+          <h1 className="text-start default-title text-white contato-home-title">Contato</h1>
           <MDBRow style={{ marginTop: '5rem' }}>
             {/* Coluna 1 - Telefone e Endereço */}
             <MDBCol md="4">

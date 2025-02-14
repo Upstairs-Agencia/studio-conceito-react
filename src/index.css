@@ -13,6 +13,12 @@ body {
   pointer-events: none !important;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn-social-navbar {
   background-color: white;
   display: inline-flex;
@@ -428,6 +434,7 @@ h4 {
 .brand-carousel {
   position: relative;
   padding: 4.7rem 1rem !important;
+  background-color: #f2f2f2 !important;
 }
 
 /* Estilização dos botões de navegação */
@@ -496,6 +503,16 @@ h4 {
   font-weight: 700;
 }
 
+.blog-home-title {
+  min-height: 5rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size: 1.1rem;
+  padding-right: 0.7rem;
+}
+
 .blog-title {
   margin-top: 2rem !important;
 }
@@ -550,8 +567,9 @@ h4 {
   padding-bottom: 5rem !important;
 }
 
-.intro-container-services h1 {
+.intro-container-services-h1 {
   padding-top: 1.5rem;
+  padding-left: 0.4rem;
 }
 
 .intro-container-services p {
@@ -694,3 +712,349 @@ h4 {
   opacity: 0.6;
 }
 
+.img-brand-carousel {
+  max-width: 120px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    justify-content: center !important;
+  }
+  .navbar-logo {
+    margin-left: 0 !important;
+    width: 70% !important;
+  }
+
+  .navbar-brand {
+    justify-content: center !important;
+  }
+
+  .navbar-content {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  .video-container iframe {
+    scale: 3.2;
+  }
+
+  .hero-section {
+    height: 85vh;
+  }
+
+  .selo-gptw-container-home {
+    height: 40% !important;
+    width: 100% !important;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 3rem !important;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 700 !important;
+    margin-top: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .hero-subtitle-container {
+    align-items: start;
+    flex-direction: column-reverse;
+  }
+
+  .title-container-home {
+    padding: 1rem !important;
+    height: 60% !important;
+    display: flex !important;
+    align-items: start !important;
+    flex-direction: column !important;
+    justify-content: end !important;
+  }
+
+  .hero-main-text {
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+  }
+
+  .overlay {
+    flex-direction: column !important;
+  }
+
+  .intro-home-col {
+    padding: 3rem 1rem !important;
+  }
+
+  .intro-home-text {
+    font-size: 1.05rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .carousel-img {
+    width: 500px !important;
+    height: auto !important;
+  }
+  .carousel-container {
+    padding: 20px;
+  }
+
+  .cases-swiper {
+    width: 100%;
+  }
+
+  .carousel-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .btn-with-icon-animation {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .wtmc-title {
+    font-size: 2.4rem !important;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  .wtmc-description {
+    color: white !important;
+    padding-left: 1rem;
+  }
+
+  .wtmc-card {
+    width: 100% !important;
+  }
+
+  .wtmc-section {
+    padding-bottom: 5rem !important;
+    background-position: -500px bottom;
+    background-size: auto;
+  }
+  .clients-home-title {
+    font-size: 2.7rem !important;
+  }
+
+  .brand-carousel {
+    padding: 20px;
+  }
+
+  .swiper-slide img {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  .btn-clients {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .img-brand-carousel {
+    max-width: 280px !important;
+  }
+
+  .blog-title {
+    font-size: 2.7rem !important;
+  }
+
+  .blog-home-title {
+    min-height: 2rem;
+    padding-bottom: 1rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 1.1rem;
+    padding-right: 0.7rem;
+  }
+
+  .contato-home-title {
+    font-size: 2.7rem !important;
+  }
+
+  .contact-option-title {
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+  }
+
+  .contact-option-description {
+    font-weight: 400;
+    margin-bottom: 3rem;
+    font-size: 1rem !important;
+  }
+
+  .toggle-navbar-btn {
+    right: 1.5rem;
+    padding-right: 0 !important;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .page-header-services {
+    padding: 2.5rem 0 !important;
+  }
+
+  .page-header-services h1 {
+    font-size: 2rem !important;
+    margin-left: 1rem !important;
+  }
+
+  .row-intro-container-services {
+    flex-direction: column-reverse !important;
+  }
+
+  .intro-container-services-h1 {
+    font-size: 2.1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .projetar-contruir-section {
+    padding-top: 0 !important;
+  }
+
+  .intro-container-services img {
+    scale: 1.05;
+    margin: 2rem 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  .project-services-container {
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 0 !important;
+    left: initial !important;
+  }
+
+  .project-services-container p {
+    font-size: 1.1rem !important;
+  }
+
+  .project-services-container h1 {
+    font-size: 2rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  .projetos-section {
+    padding: 5rem 0rem;
+  }
+
+  .projetos-section .col-md-5 {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .desktop-hidden {
+    display: initial;
+  }
+
+  .img-project-services-mobile {
+    margin: 1rem 0 !important;
+  }
+
+  .destaques-section {
+    background-image: none;
+    height: auto !important;
+    padding: 3rem 1rem !important;
+  }
+
+  .obras-section {
+    padding: 3rem 0;
+    background-position: -433px bottom;
+    background-size: auto 186px;
+    padding-bottom: 13rem;
+  }
+
+  .obras-section h1 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .obras-section p {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    line-height: 1.55;
+    font-size: 17px !important;
+    margin: 0 !important;
+  }
+
+  .img-obras-servicos {
+    margin-bottom: 2rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .obras-section img {
+    border-radius: 0 !important;
+  }
+
+  .planejamento-section {
+    background-image: none;
+    height: auto;
+    padding: 6rem 1rem;
+  }
+
+  .page-header-client {
+    background-color: #000000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 164% auto;
+    padding: 2.5rem 0 !important;
+  }
+
+  .page-header-client h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .intro-page-client {
+    padding-bottom: 0 !important ;
+  }
+
+  .intro-page-client p {
+    text-align: center;
+    padding: 0rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .intro-page-client img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .brand-client {
+    object-position: center;
+    object-fit: cover;
+    transform: scale(1.5); /* Ajuste a escala conforme necessário */
+}
+
+
+}
+
+.desktop-hidden {
+  display: block;
+}

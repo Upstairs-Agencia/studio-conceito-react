@@ -85,3 +85,25 @@
     margin-bottom: 1rem;
   }
   
+  @media screen and (max-width: 768px) {
+    .footer-left {
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .footer-copyright {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-copyright a {
+      width: 100%;
+      margin-bottom: 3rem !important;
+      padding-top: 0 !important;
+    }
+
+    .footer-logo {
+      max-width: 30% !important;
+      margin-bottom: 2rem !important;
+    }
+  }

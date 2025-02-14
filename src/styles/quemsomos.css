@@ -149,10 +149,26 @@
 .chart-container {
   width: 100% !important;
   display: flex;
-  justify-content: end;
+  flex-direction: column; /* Para garantir que a legenda fique abaixo */
   align-items: center;
   overflow: hidden;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.chart-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaçamento entre as imagens */
+  width: 100%;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 4rem !important;
+  width: 100%;
+  font-size: 0.75rem !important;
 }
 
 .grafico-img-socios {
@@ -223,7 +239,7 @@
   scale: 105%;
 }
 
-.intro-section-about{
+.intro-section-about {
   padding: 0 !important;
   padding-top: 4rem !important;
   padding-bottom: 5rem !important;
@@ -237,16 +253,17 @@
   border-radius: 15px;
 }
 
-.intro-section-about h2,p{
+.intro-section-about h2,
+p {
   padding: 0;
-  margin: 0; 
+  margin: 0;
   word-spacing: 0.1rem;
 }
 
 .intro-section-about h2 {
   color: black;
   font-size: 2.7rem !important;
-  margin-bottom: 0.8rem !important;  
+  margin-bottom: 0.8rem !important;
   margin-top: 3.5rem !important;
 }
 
@@ -268,5 +285,115 @@
 
   .mission-col {
     max-width: 100%;
+    text-align: center !important;
+    margin: 3rem 0;
+  }
+
+  .page-header-about {
+    position: relative; /* Garante que o pseudo-elemento seja posicionado corretamente */
+    padding: 2.5rem 0 !important;
+    background-size: auto 100%;
+  }
+
+  .page-header-about::before {
+    content: ""; /* Necessário para exibir o elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    z-index: 1; /* Garante que o overlay fique sobre a imagem */
+  }
+
+  .page-header-about * {
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
+  }
+
+  .page-header-about h1 {
+    font-size: 2rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .intro-text-container {
+    background-color: white !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .intro-text-container h2 {
+    margin-top: 1rem !important;
+    font-size: 2rem !important;
+  }
+
+  .intro-section-about img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .intro-section-about {
+    padding-top: 4rem !important;
+    padding-bottom: 13rem !important;
+    background-position: -643px bottom;
+    background-repeat: no-repeat;
+    background-size: auto 16%;
+  }
+
+  .atendimento-row {
+    padding: 0 1rem !important;
+  }
+
+  .equipe-text {
+    padding: 3rem 2rem !important;
+  }
+
+  /* Diversidade Section */
+  .diversidade-section {
+    background-color: #f9f9f9;
+    color: #000;
+    padding: 3rem 2rem;
+  }
+
+  .diversidade-row {
+    min-height: 55vh !important;
+  }
+
+  .diversidade-text p {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    margin-right: 1rem;
+    letter-spacing: 0.4px;
+  }
+
+  .diversidade-text .destaque {
+    color: #3d7cc9;
+    font-weight: 700;
+  }
+
+  .chart-images {
+    flex-direction: column;
+    gap: 4rem; /* Espaçamento entre as imagens */
+    width: 100%;
+  }
+
+  .chart-container {
+    margin-top: 3rem !important;
+  }
+
+  .grafico-img-socios {
+    width: 18rem !important;
+    height: 100% !important;
+  }
+  .grafico-img-colaboradores {
+    width: 17.5rem !important;
+  }
+
+  .chart-legend {
+    padding-top: 1.5rem !important;
+    flex-direction: column;
+    margin: 0 !important;
   }
 }

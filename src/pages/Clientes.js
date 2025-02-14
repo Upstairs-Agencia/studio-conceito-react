@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,6 +12,16 @@ const fadeInScale = {
 };
 
 const Clientes = () => {
+  // Estado para armazenar se é mobile ou não
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Atualiza o estado quando a tela for redimensionada
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Lista de logos organizadas na ordem das imagens
   const logos = [
     "baxter", "sulamerica", "ifood", "ibm", "d-basf",
@@ -36,7 +46,7 @@ const Clientes = () => {
       </section>
 
       {/* Seção com texto e imagem */}
-      <section className="py-5 bg-white" style={{ overflow: "hidden" }}>
+      <section className="py-5 bg-white intro-page-client" style={{ overflow: "hidden" }}>
         <MDBContainer>
           <MDBRow className="align-items-center">
             <MDBCol md="6">
@@ -70,37 +80,36 @@ const Clientes = () => {
       {/* Grid de logos */}
       <section className="py-5 bg-white">
         <MDBContainer fluid>
-          {logos.reduce((rows, logo, index) => {
-            if (index % 5 === 0) rows.push([]);
-            rows[rows.length - 1].push(logo);
-            return rows;
-          }, []).map((row, rowIndex) => (
-            <MDBRow key={rowIndex} className="mb-4 justify-content-center align-items-center">
-              {row.map((logo, index) => (
-                <MDBCol key={index} className="mb-4 d-flex justify-content-center client-collumn">
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={fadeInScale}
-                  >
-                    <LazyLoadImage
-                      src={`images/clientesImg/${logo}.png`}
-                      alt={`Logo ${logo}`}
-                      width={"100%"}
-                      height={"auto"}
-                      effect="blur"
-                      style={{
-                        backgroundColor: "#fff",
-                        border: "none",
-                        padding: "1rem",
-                      }}
-                    />
-                  </motion.div>
-                </MDBCol>
-              ))}
-            </MDBRow>
-          ))}
+          <MDBRow className="justify-content-center">
+            {logos.map((logo, index) => (
+              <MDBCol
+                key={index}
+                md="2" // 5 por linha no desktop (12/2 = 6 logos por linha)
+                className={`mb-4 d-flex justify-content-center client-collumn ${isMobile ? "col-6" : ""}`}
+              >
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={fadeInScale}
+                >
+                  <LazyLoadImage
+                    src={`images/clientesImg/${logo}.png`}
+                    alt={`Logo ${logo}`}
+                    width={"100%"}
+                    height={"auto"}
+                    effect="blur"
+                    className="brand-client"
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "none",
+                      padding: "1rem",
+                    }}
+                  />
+                </motion.div>
+              </MDBCol>
+            ))}
+          </MDBRow>
         </MDBContainer>
       </section>
     </div>

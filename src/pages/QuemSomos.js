@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdb-react-ui-kit";
 import { FiEye, FiHeart } from "react-icons/fi";
 import { LiaBullseyeSolid } from "react-icons/lia";
 import "../styles/quemsomos.css";
@@ -9,6 +9,7 @@ import socio2 from '../images/quemsomosImg/socioCastilho.png';
 import graficoDiversidadeSocios from '../images/quemsomosImg/diversidade-socios-grafico.png';
 import graficoDiversidadeColaboradores from '../images/quemsomosImg/diversidade-colaboradores-grafico.png';
 import { FaLinkedinIn } from "react-icons/fa6";
+import { GoDotFill } from "react-icons/go";
 
 export default function QuemSomos() {
   return (
@@ -188,7 +189,7 @@ export default function QuemSomos() {
           <section className="equipe-section">
             <MDBContainer fluid className="d-flex">
               <MDBRow className=" align-items-between">
-                <MDBCol md="4" className="p-0 equipe-image-col">
+                <MDBCol md="4" className="p-0 equipe-image-col mobile-hidden">
                   <span className="equipe-image"></span>
                 </MDBCol>
                 <MDBCol
@@ -226,8 +227,14 @@ export default function QuemSomos() {
                 </MDBCol>
                 <MDBCol md="7" className="d-flex justify-content-center">
                   <div className="chart-container">
-                    <img src={graficoDiversidadeSocios} className="grafico-img-socios" alt="Gráfico de diversidade - Sócios" />
-                    <img src={graficoDiversidadeColaboradores} className="grafico-img-colaboradores" alt="Gráfico de diversidade - Colaboradores" />
+                    <div className="chart-images">
+                      <img src={graficoDiversidadeSocios} className="grafico-img-socios" alt="Gráfico de diversidade - Sócios" />
+                      <img src={graficoDiversidadeColaboradores} className="grafico-img-colaboradores" alt="Gráfico de diversidade - Colaboradores" />
+                    </div>
+                    <div className="chart-legend">
+                      <GoDotFill color='#3D7CC9' size={25}/>
+                      <span>Gênero feminino</span>
+                    </div>
                   </div>
                 </MDBCol>
               </MDBRow>

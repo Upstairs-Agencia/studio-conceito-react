@@ -38,7 +38,7 @@ const Footer = () => {
         </MDBRow>
         <MDBRow className="">
           {/* Navegação */}
-          <MDBCol md="12" className="mb-3 footer-center footer-no-padding">
+          <MDBCol md="12" className="mb-3 footer-center footer-no-padding mobile-hidden">
             <nav className="footer-nav">
               <a href="/" className={location.pathname === "/" && ('footerHighlight')}>Home</a>
               <a href="/quem-somos" className={location.pathname === "/" ? ('text-white')

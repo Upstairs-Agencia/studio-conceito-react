@@ -51,7 +51,7 @@ const Navbar = () => {
         sticky
         className={`px-3 transition-navbar ${isNavbarHidden ? "navbar-hidden" : ""}`}
       >
-        <MDBContainer fluid className="d-flex justify-content-between align-items-center">
+        <MDBContainer fluid className="navbar-container">
           <MDBNavbarBrand href="/#">
             <img src={location.pathname === '/' ? LogoWhite : LogoBlack} alt="Logo" className="navbar-logo" />
           </MDBNavbarBrand>
