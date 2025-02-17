@@ -46,12 +46,12 @@ const Navbar = () => {
   return (
     <>
       <MDBNavbar
-        dark
-        bgColor={location.pathname === '/' ? "black" : 'white'}
+        {...(location.pathname === '/' ? { dark: true, bgColor: "black" } : { light: true, bgColor: "white" })}
         sticky
         className={`px-3 transition-navbar ${isNavbarHidden ? "navbar-hidden" : ""}`}
       >
-        <MDBContainer fluid className="navbar-container">
+
+        <MDBContainer fluid className="navbar-container d-flex flex-column flex-md-row justify-content-between align-items-center">
           <MDBNavbarBrand href="/#">
             <img src={location.pathname === '/' ? LogoWhite : LogoBlack} alt="Logo" className="navbar-logo" />
           </MDBNavbarBrand>

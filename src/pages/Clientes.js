@@ -33,7 +33,7 @@ const Clientes = () => {
   ];
 
   return (
-    <div>
+    <div className="overflow-mobile-hidden">
       {/* Cabeçalho */}
       <section className="bg-black text-white page-header-client">
         <MDBContainer>
@@ -85,7 +85,7 @@ const Clientes = () => {
               <MDBCol
                 key={index}
                 md="2" // 5 por linha no desktop (12/2 = 6 logos por linha)
-                className={`mb-4 d-flex justify-content-center client-collumn ${isMobile ? "col-6" : ""}`}
+                className={`mb-4 d-flex justify-content-center overflow-mobile-hidden client-collumn ${isMobile ? "col-6" : ""}`}
               >
                 <motion.div
                   initial="hidden"
