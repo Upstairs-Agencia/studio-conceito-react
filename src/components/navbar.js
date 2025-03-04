@@ -56,7 +56,7 @@ const Navbar = () => {
             <img src={location.pathname === '/' ? LogoWhite : LogoBlack} alt="Logo" className="navbar-logo" />
           </MDBNavbarBrand>
 
-          <div className="d-flex align-items-center gap-4 navbar-content">
+          <div className="d-flex align-items-center gap-3 navbar-content">
             <a
               className={`btn-social-navbar rounded-circle p-2 ${location.pathname === '/' ? "bg-white text-black" : 'bg-black text-white'}`}
               href="https://www.linkedin.com/company/studio-conceito-arquitetura"

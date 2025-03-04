@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-content {
-  margin-right: 5rem !important;
+  margin-right: 6.5rem !important;
 }
 
 .toggle-navbar-btn {
@@ -328,7 +328,6 @@ h4 {
 }
 
 .swiper-slide {
-  width: 60%;
   position: relative;
 }
 
@@ -572,6 +571,10 @@ h4 {
 
 .page-header-services {
   background-color: #000000;
+  background-image: url("images/quemsomosImg/header_quem-somos-1.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   color: white;
   padding: 4.5rem 0 !important;
 }
@@ -726,7 +729,11 @@ h4 {
 }
 
 .img-brand-carousel {
-  max-width: 120px !important;
+  max-width: 200px !important;
+}
+
+.title-container-home {
+  padding-top: 8rem !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -930,12 +937,30 @@ h4 {
   }
 
   .page-header-services {
+    position: relative; /* Garante que o pseudo-elemento seja posicionado corretamente */
     padding: 2.5rem 0 !important;
+    background-size: auto 100%;
+  }
+
+  .page-header-services::before {
+    content: ""; /* Necessário para exibir o elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    z-index: 1; /* Garante que o overlay fique sobre a imagem */
+  }
+
+  .page-header-services * {
+    position: relative; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
   }
 
   .page-header-services h1 {
     font-size: 2rem !important;
-    margin-left: 1rem !important;
+    padding-left: 0.5rem !important;
   }
 
   .row-intro-container-services {
@@ -1060,7 +1085,7 @@ h4 {
   }
 
   .overflow-mobile-hidden {
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .brand-client {

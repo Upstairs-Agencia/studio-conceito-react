@@ -108,7 +108,7 @@ const Home = () => {
       </motion.div>
 
       {/* Seção de Equipe */}
-      <section className="bg-black" style={{ color: '#fff' }} id="intro">
+      <section className="bg-black" style={{ color: '#fff', paddingTop: '5rem' }} id="intro">
         <MDBContainer fluid>
           <MDBRow className="align-items-center gap-0">
             <MDBCol

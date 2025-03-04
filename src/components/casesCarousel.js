@@ -8,6 +8,9 @@ import "swiper/css/effect-coverflow";
 const cases = [
     { title: "Studio Conceito", image: "/images/casesImg/studioconceito.png" },
     { title: "Apsen", image: "/images/casesImg/studioconceito.png" },
+    { title: "Astrazeneca Centro Médico", image: "/images/casesImg/studioconceito.png" },
+    { title: "Studio Conceito", image: "/images/casesImg/studioconceito.png" },
+    { title: "Apsen", image: "/images/casesImg/studioconceito.png" },
     { title: "Astrazeneca Centro Médico", image: "/images/casesImg/studioconceito.png" }
 ];
 
@@ -17,13 +20,12 @@ export default function CasesCarousel() {
             <h2 className="carousel-title">Cases</h2>
             <Swiper
                 effect={"coverflow"}
-                grabCursor={true}       // Permite arrastar com o mouse
-                centeredSlides={true}   // Centraliza o slide ativo
-                loop={true}             // Loop infinito
-                pagination={{ clickable: true }} // Paginação clicável
-                navigation={false}      // Se quiser, pode habilitar setas de navegação
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                pagination={{ clickable: true }}
+                navigation={false}
                 modules={[EffectCoverflow, Pagination, Navigation]}
-                // Configuração do efeito coverflow
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -31,7 +33,6 @@ export default function CasesCarousel() {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                // Configuração responsiva
                 breakpoints={{
                     320: {
                         slidesPerView: 1,
@@ -51,9 +52,9 @@ export default function CasesCarousel() {
                 {cases.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="slide-content" style={{ borderRadius: "10px", overflow: 'hidden' }}>
-                            <img 
-                                src={item.image} 
-                                alt={item.title} 
+                            <img
+                                src={item.image}
+                                alt={item.title}
                                 className="carousel-img hover-zoom bg-image"
                             />
                         </div>
@@ -61,6 +62,7 @@ export default function CasesCarousel() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+
         </div>
     );
 }

@@ -91,8 +91,7 @@
 
 .equipe-image {
   background-image: url("../images/quemsomosImg/Backgroundesqerda.jpg");
-  background-repeat: repeat;
-  background-size: contain;
+  background-repeat: no-repeat;
   background-position-y: center;
   height: 100%;
   width: 100%;
@@ -104,9 +103,10 @@
 }
 
 .equipe-text {
-  padding: 3rem 0 !important;
-  padding-left: 4rem !important;
+  padding: 5rem 0 !important;
+  padding-left: 16rem !important;
   padding-right: 1rem !important;
+  width: 41% !important;
 }
 
 .equipe-text h2 {
@@ -272,6 +272,21 @@ p {
   padding-right: 1rem !important;
 }
 
+@media (max-width: 1640px) {
+  .equipe-image {
+    background-repeat: repeat;
+    background-size: contain;
+  }
+
+  .equipe-text {
+    padding: 3rem 0 !important;
+    padding-left: 4rem !important;
+    padding-right: 1rem !important;
+    width: 50% !important;
+  }
+
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .atendemos-title,
@@ -281,6 +296,10 @@ p {
 
   .text-large {
     font-size: 1rem;
+  }
+
+  .equipe-text {
+    width: 100% !important;
   }
 
   .mission-col {
@@ -377,6 +396,8 @@ p {
     flex-direction: column;
     gap: 4rem; /* Espaçamento entre as imagens */
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .chart-container {

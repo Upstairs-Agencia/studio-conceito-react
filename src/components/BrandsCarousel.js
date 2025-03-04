@@ -83,7 +83,7 @@ const BrandsCarousel = () => {
                     {brands.map((brand, index) => (
                         <SwiperSlide key={index}>
                             <MDBCol className="text-center">
-                                <img src={`/images/clientesImg/${brand.logo}`} alt={brand.name} className="img-brand-carousel" style={{ maxWidth: "120px" }} />
+                                <img src={`/images/clientesImg/${brand.logo}`} alt={brand.name} className="img-brand-carousel" />
                             </MDBCol>
                         </SwiperSlide>
                     ))}
