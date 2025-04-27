@@ -21,8 +21,8 @@ const Navbar = () => {
     { label: "Home", link: "/" },
     { label: "Quem somos", link: "/quem-somos" },
     { label: "Serviços", link: "/servicos" },
-    { label: "Cases", link: "https://sconceito.com.br/cases/" },
-    { label: "Blog", link: "https://sconceito.com.br/blog/" },
+    { label: "Cases", link: "https://blog.sconceito.com.br/cases/" },
+    { label: "Blog", link: "https://blog.sconceito.com.br/" },
     { label: "Clientes", link: "/clientes" },
     { label: "Contato", link: "/contato" },
   ];
