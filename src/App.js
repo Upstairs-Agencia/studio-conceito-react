@@ -31,9 +31,7 @@ function App() {
       </Routes>
       <Footer />
       <SConceitoAIChat isOpen={isChatOpen} toggleChat={toggleChat} />
-      <button className="chat-floating-button" onClick={toggleChat}>
-        💬
-      </button>
+      <button className="chat-floating-button" onClick={toggleChat} />
     </Router>
   );
 }
