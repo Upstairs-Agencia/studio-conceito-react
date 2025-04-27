@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   MDBContainer,
@@ -33,23 +33,24 @@ const slideInRight = {
 };
 
 const Home = () => {
-  const posts = [
-    {
-      title: 'O futuro do escritório é híbrido!',
-      date: 'abril 15, 2024',
-      image: 'images/homeImg/home3.png',
-    },
-    {
-      title: 'Tendências da arquitetura corporativa',
-      date: 'abril 15, 2024',
-      image: 'images/homeImg/home4.png',
-    },
-    {
-      title: 'Turn Key ou chave na mão',
-      date: 'abril 15, 2024',
-      image: 'images/homeImg/home5.png',
-    },
-  ];
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://blog.sconceito.com.br/wp-json/wp/v2/posts?per_page=3&_embed')
+      .then(res => res.json())
+      .then(data => {
+        // Monta os dados para o seu card
+        const formatted = data.map(post => ({
+          title: post.title.rendered,
+          date: new Date(post.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }),
+          image:
+            post._embedded?.['wp:featuredmedia']?.[0]?.source_url ||
+            'https://blog.sconceito.com.br/wp-content/themes/twentytwentyone/assets/images/default-image.jpg',
+          link: post.link,
+        }));
+        setPosts(formatted);
+      });
+  }, []);
 
   return (
     <div className="overflow-mobile-hidden">
@@ -283,7 +284,7 @@ const Home = () => {
                           Artigos
                         </p>
                       </MDBCardTitle>
-                      <a href="#!" className="blog-home-title">
+                      <a href={post.link} className="blog-home-title">
                         {post.title}
                       </a>
                       <p style={{ color: '#ff6600', fontSize: '0.8rem' }}>
@@ -297,7 +298,8 @@ const Home = () => {
           </MDBRow>
           <motion.a
             className="btn-with-icon-animation btn-blog"
-            href="https://sconceito.com.br/cases/"
+            href="https://blog.sconceito.com.br/"
+            target="_blank"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
           >
