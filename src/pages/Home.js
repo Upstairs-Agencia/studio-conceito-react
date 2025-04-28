@@ -92,7 +92,7 @@ const Home = () => {
             <img
               src={SeloGptw}
               alt="Selo GPTW"
-              width="120px"
+              width="90px"
               height="auto"
             />
           </motion.div>

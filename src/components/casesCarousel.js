@@ -6,12 +6,12 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 const cases = [
-    { title: "Studio Conceito", image: "/images/casesImg/studioconceito.png" },
-    { title: "Apsen", image: "/images/casesImg/studioconceito.png" },
-    { title: "Astrazeneca Centro Médico", image: "/images/casesImg/studioconceito.png" },
-    { title: "Studio Conceito", image: "/images/casesImg/studioconceito.png" },
-    { title: "Apsen", image: "/images/casesImg/studioconceito.png" },
-    { title: "Astrazeneca Centro Médico", image: "/images/casesImg/studioconceito.png" }
+    { title: "Studio Conceito", url: "https://blog.sconceito.com.br/studioconceito/", image: "/images/casesImg/studio-conceito.jpg" },
+    { title: "Apsen", url: "https://blog.sconceito.com.br/apsen2/", image: "/images/casesImg/apsen.jpg" },
+    { title: "Empresa de Tecnologia", url: "https://blog.sconceito.com.br/empresa-de-tecnologia/", image: "/images/casesImg/empresa-tecnologia.jpg" },
+    { title: "iFood", url: "https://blog.sconceito.com.br/ifood-2", image: "/images/casesImg/ifood.jpg" },
+    { title: "Bacardi", url: "https://blog.sconceito.com.br/bacardi/", image: "/images/casesImg/bacardi.jpg" },
+    { title: "Astrazeneca Centro Médico", url: "https://blog.sconceito.com.br/astrazeneca/", image: "/images/casesImg/astrazeneca-centromedico.jpg" }
 ];
 
 export default function CasesCarousel() {
@@ -31,7 +31,7 @@ export default function CasesCarousel() {
                     stretch: 0,
                     depth: 100,
                     modifier: 1,
-                    slideShadows: true,
+                    slideShadows: false,
                 }}
                 breakpoints={{
                     320: {
@@ -51,18 +51,25 @@ export default function CasesCarousel() {
             >
                 {cases.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <div className="slide-content" style={{ borderRadius: "10px", overflow: 'hidden' }}>
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="carousel-img hover-zoom bg-image"
-                            />
-                        </div>
+                        <div
+                            className="carousel-img-bg"
+                            style={{
+                                backgroundImage: `url(${item.image})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                width: '350px',
+                                height: '220px',
+                                borderRadius: '10px',
+                                margin: '0 auto',
+                                cursor: 'pointer'
+                            }}
+                            onClick={() => window.open(item.url, '_blank')}
+                            title={item.title}
+                        />
                         <p className="carousel-text">{item.title}</p>
                     </SwiperSlide>
                 ))}
             </Swiper>
-
         </div>
     );
 }

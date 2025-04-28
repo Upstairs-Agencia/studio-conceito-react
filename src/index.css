@@ -67,10 +67,10 @@ body {
 }
 
 .gptw-selo-sidebar {
-  width: 150px;
+  width: 120px;
   height: auto;
   bottom: 2rem;
-  right: 0;
+  right: 0.5rem;
   position: fixed;
 }
 
@@ -218,7 +218,8 @@ body {
   width: auto !important;
   display: flex;
   align-items: start;
-  padding-top: 5rem !important;
+  padding-top: 6rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .scroll-button {
@@ -340,11 +341,17 @@ h4 {
 
 .carousel-text {
   position: absolute;
-  bottom: 0px;
-  left: 15px;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.5rem;
+  bottom: 0;
+  margin-bottom: 0px;
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+  z-index: 2;
 }
 
 .cases-swiper {
@@ -760,6 +767,30 @@ h4 {
   transition: background-color 0.3s ease;
 }
 
+.carousel-img-bg {
+  width: 550px !important;
+  height: 320px !important;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  position: relative;
+  overflow: hidden; /* Garante que o overlay não ultrapasse os cantos arredondados */
+  cursor: pointer;
+}
+
+.carousel-img-bg::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.2); /* Ajuste a opacidade conforme desejar */
+  border-radius: 10px;
+  z-index: 2;
+  pointer-events: none; /* Permite clicar em elementos acima do overlay */
+}
+
 @media screen and (max-width: 768px) {
   .navbar-container {
     justify-content: center !important;
@@ -855,10 +886,8 @@ h4 {
   }
 
   .carousel-text {
-    text-align: center;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 8px;
-    left: 15px !important;
     bottom: -2px !important;
   }
 
@@ -1116,6 +1145,11 @@ h4 {
     object-position: center;
     object-fit: cover;
     transform: scale(1.5); /* Ajuste a escala conforme necessário */
+  }
+
+  .carousel-img-bg {
+    height: 250px !important;
+    max-width: 100%;
   }
 }
 
