@@ -171,9 +171,6 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #005a9e;
-}
 
 /* Mobile styles */
 @media (max-width: 768px) {

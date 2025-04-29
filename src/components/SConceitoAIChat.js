@@ -10,6 +10,7 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
     const [userInput, setUserInput] = useState('');
     const [authForm, setAuthForm] = useState({ name: '', email: '', phone: '', businessName: '' });
     const [isLoading, setIsLoading] = useState(false);
+    const [isAuthLoading, setIsAuthLoading] = useState(false);
     const api = process.env.REACT_APP_API_URL;
 
     // Ref para rolar o chat
@@ -38,6 +39,7 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
 
     const handleAuthSubmit = async (e) => {
         e.preventDefault();
+        setIsAuthLoading(true);
         try {
             const response = await fetch(`${api}/auth`, {
                 method: 'POST',
@@ -55,6 +57,8 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
         } catch (error) {
             console.error('Erro ao autenticar:', error);
             resetChat();
+        } finally {
+            setIsAuthLoading(false);
         }
     };
 
@@ -165,7 +169,13 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
                                 onChange={handleAuthChange}
                                 required
                             />
-                            <button type="submit">Entrar</button>
+                            <button type="submit" disabled={isAuthLoading}>
+                                {isAuthLoading ? (
+                                    <>Preparando experiência <DotsLoading /></>
+                                ) : (
+                                    "Entrar"
+                                )}
+                            </button>
                         </form>
                     </>
                 ) : (
@@ -173,7 +183,11 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
                         <div className="messages">
                             {messages.map((msg, index) => (
                                 <div key={index} className={`message ${msg.user === 'Você' ? 'user' : 'ia'}`}>
-                                    <span className="bubble">{msg.message}</span>
+                                    {msg.thinking ? (
+                                        <span className="bubble">Pensando <DotsLoading /></span>
+                                    ) : (
+                                        <span className="bubble">{msg.message}</span>
+                                    )}
                                 </div>
                             ))}
                             <div ref={messagesEndRef} />
@@ -199,5 +213,16 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
         </div>
     );
 };
+
+function DotsLoading() {
+    const [dotCount, setDotCount] = useState(1);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDotCount((prev) => (prev % 3) + 1);
+        }, 500);
+        return () => clearInterval(interval);
+    }, []);
+    return <span>{'.'.repeat(dotCount)}</span>;
+}
 
 export default SConceitoAIChat;
