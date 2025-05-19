@@ -84,7 +84,7 @@ const Home = () => {
               </motion.h1>
             </div>
           </MDBContainer>
-          <motion.div
+          <div
             className="selo-gptw-container-home"
             whileHover={{ scale: 1.1 }}
             variants={fadeInUp}
@@ -92,10 +92,10 @@ const Home = () => {
             <img
               src={SeloGptw}
               alt="Selo GPTW"
-              width="90px"
+              width="120px"
               height="auto"
             />
-          </motion.div>
+          </div>
           <motion.a
             href="#intro"
             className="scroll-button"

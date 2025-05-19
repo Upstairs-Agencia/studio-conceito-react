@@ -1,0 +1,47 @@
+.chat-hint {
+  position: fixed;
+  cursor: pointer;
+  bottom: 5vh; /* ajuste pra ficar acima do botão */
+  right: 5.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chat-hint.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chat-hint span {
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: #000;
+}
+
+.chat-hint-close {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .chat-hint {
+    bottom: 3.4vh;
+  }
+
+  .chat-hint span {
+    font-size: 0.9rem;
+  }
+}

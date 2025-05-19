@@ -9,12 +9,14 @@ import Contato from './pages/Contato';
 import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
 import SConceitoAIChat from './components/SConceitoAIChat';
-
+import ChatHint from './components/ChatHint';
 function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [showHint, setShowHint] = useState(true);
 
   const toggleChat = () => {
-    setIsChatOpen(!isChatOpen);
+    setIsChatOpen(open => !open);
+    setShowHint(false);
   };
 
   return (
@@ -30,8 +32,19 @@ function App() {
         <Route path="/contato" element={<Contato />} />
       </Routes>
       <Footer />
+
+      {/* balão de dica */}
+      <ChatHint visible={showHint} onClose={() => setShowHint(false)} />
+
+      {/* chat widget */}
       <SConceitoAIChat isOpen={isChatOpen} toggleChat={toggleChat} />
-      <button className="chat-floating-button" onClick={toggleChat} />
+
+      {/* botão flutuante */}
+      <button
+        className="chat-floating-button visible"
+        onClick={toggleChat}
+      />
+
     </Router>
   );
 }

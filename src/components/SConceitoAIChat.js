@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../styles/sconceitoaichat.css';
 import { CiCircleChevDown } from "react-icons/ci";
+import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+import LogoWhite from "../images/logo.png";
+
 
 const SConceitoAIChat = ({ isOpen, toggleChat }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -127,7 +130,7 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
     return (
         <div className={`chat-container ${isOpen ? 'open' : 'close'}`}>
             <div className="chat-header">
-                <h3>SConceito AI</h3>
+                <img src={LogoWhite} className='logo-chat-header' />
                 <button className="close-button" onClick={toggleChat}>
                     <CiCircleChevDown size={24} />
                 </button>
@@ -135,7 +138,7 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
             <div className="chat-body">
                 {!isAuthenticated ? (
                     <>
-                        <p>Antes de começarmos, gostariamos de conhecer você melhor.</p>
+                        <p className="chat-intro-body"> Ficou com alguma dúvida ou quer saber mais? Conte um pouco sobre você e entraremos em contato em breve! </p>
                         <form onSubmit={handleAuthSubmit}>
                             <input
                                 type="text"
@@ -180,6 +183,11 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
                     </>
                 ) : (
                     <>
+                        <div className='info-ok'>
+                            <IoMdCheckmarkCircleOutline />
+                            <p>Agradecemos por fornecer suas informações. Em breve, nossa equipe entrará em contato com você.</p>
+                        </div>
+                        {/*
                         <div className="messages">
                             {messages.map((msg, index) => (
                                 <div key={index} className={`message ${msg.user === 'Você' ? 'user' : 'ia'}`}>
@@ -192,10 +200,12 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
                             ))}
                             <div ref={messagesEndRef} />
                         </div>
+                        */
+                        }
                     </>
                 )}
             </div>
-            {isAuthenticated && (
+            {/*{isAuthenticated && (
                 <div className="chat-footer">
                     <input
                         type="text"
@@ -210,7 +220,8 @@ const SConceitoAIChat = ({ isOpen, toggleChat }) => {
                     </button>
                 </div>
             )}
-        </div>
+            */}
+        </div >
     );
 };
 

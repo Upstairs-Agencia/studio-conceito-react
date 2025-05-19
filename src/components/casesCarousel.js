@@ -6,8 +6,8 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 const cases = [
-    { title: "Studio Conceito", url: "https://blog.sconceito.com.br/studioconceito/", image: "/images/casesImg/studio-conceito.jpg" },
     { title: "Apsen", url: "https://blog.sconceito.com.br/apsen2/", image: "/images/casesImg/apsen.jpg" },
+    { title: "Studio Conceito", url: "https://blog.sconceito.com.br/studioconceito/", image: "/images/casesImg/studio-conceito.jpg" },
     { title: "Empresa de Tecnologia", url: "https://blog.sconceito.com.br/empresa-de-tecnologia/", image: "/images/casesImg/empresa-tecnologia.jpg" },
     { title: "iFood", url: "https://blog.sconceito.com.br/ifood-2", image: "/images/casesImg/ifood.jpg" },
     { title: "Bacardi", url: "https://blog.sconceito.com.br/bacardi/", image: "/images/casesImg/bacardi.jpg" },
@@ -21,7 +21,7 @@ export default function CasesCarousel() {
             <Swiper
                 effect={"coverflow"}
                 grabCursor={true}
-                centeredSlides={true}
+                centeredSlides={false}
                 loop={true}
                 pagination={{ clickable: true }}
                 navigation={false}
@@ -57,10 +57,7 @@ export default function CasesCarousel() {
                                 backgroundImage: `url(${item.image})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
-                                width: '350px',
-                                height: '220px',
                                 borderRadius: '10px',
-                                margin: '0 auto',
                                 cursor: 'pointer'
                             }}
                             onClick={() => window.open(item.url, '_blank')}
